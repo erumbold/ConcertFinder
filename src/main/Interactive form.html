@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concert form</title>
+    <style>
+        label{
+        font-family: Arial,Helvetica;
+        font-size:0.8em;
+        }
+
+    </style>
+</head>
+<body>
+<form method="post" action="contact-form-proc.php" name="conatactform" id="contactform">
+    <p>
+        <label for="fullname">Your Name:</label>
+        <input type="text" name="fullname"/>
+    </p>
+    <p>
+        <label for="email">Email:</label>
+        <input type="text" name="event"/>
+    </p>
+
+    <p>
+        <label for="event">Event Name:</label>
+        <input type="text" name="event"/>
+    </p>
+
+    <p>
+        <label for="date">Date:</label>
+        <input type="text" name="date"/>
+    </p>
+
+    <p>
+        <label for="time">Time:</label>
+        <input type="text" name="time"/>
+    </p>
+
+    <p>
+        <label for="location">Location:</label>
+        <input type="text" name="location"/>
+    </p>
+
+    <p>
+        <label for="price">Price:</label>
+        <input type="text" name="price"/>
+    </p>
+    <p>
+        <label for="description">Description</label>
+        <input type="text" name="description"/>
+    </p>
+
+    <input type="submit" name="submit" value="Submit Form">
+</form>
+
+<script>
+document.contactform.onsubmit=function()
+{
+    if(document.contactform.fullname.value=='')
+    {
+    alert("please enter your name");
+    document.contactform.fullname.focus();
+    return false
+    }
+    else if(document.contractform.email.value== '')
+    {
+    alert("please enter your Email address");
+    document.contactform.email.focus();
+    return false;
+    }
+    return true
+}
+
+</script>
+
+
+
+</body>
+</html>
