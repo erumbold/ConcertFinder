@@ -7,7 +7,7 @@ if(empty($_POST["submit"]))
 }
 if(empty($_POST["fullname"]) || empty($_POST["email"]))
 {
-    echo "Please fill the form"
+    echo "Please fill the form";
     exit;
 }
 $name=$_POST["fullname"];
