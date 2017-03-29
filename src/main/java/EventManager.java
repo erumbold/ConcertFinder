@@ -1,25 +1,15 @@
+import java.sql.*;
+import java.util.ArrayList;
+
 /**
  * Created by erikarumbold on 3/27/17.
  */
 public class EventManager {
-    public String insertEvent(String title, int month, int day, int year, int hour, int minute, String description,
-                              String address, String city, String state, int zipCode, double longitude, double latitude){
-        String x = "";
-        return x;               // return event title
-    }
 
-    public String modifyEvent(){
-        String x = "";
-        return x;               // return event title
-    }
-
-    public String deleteEvent(){
-        String x = "";
-        return x;               // return event title
-    }
-
-    public String selectEvent(){
-        String x = "";
-        return x;               // return event title
+    public static void main(String[] args) {
+        Database db = new Database();
+        String result = db.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
+                "The Woodlands", "123 Place", "Dover", "DE", "19901", -.5, .5);
+        System.out.println(result);
     }
 }
