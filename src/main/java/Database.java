@@ -46,7 +46,9 @@ public class Database {
     public String insertEvent(String title, int month, int day, int year, int hour, int minute,
                               String description, String venueName, String address, String city,
                               String state, String zipCode, double longitude, double latitude){
+
         try {
+
             PreparedStatement st = c.prepareStatement("INSERT INTO EVENT (ID, TITLE, MONTH, DAY, YEAR, HOUR, MINUTE, " +
                     "DESCRIPTION, VENUE_NAME, ADDRESS, CITY, STATE, ZIPCODE, LONGITUDE, LATITUDE) VALUES (?,?,?,?,?,?," +
                     "?,?,?,?,?,?,?,?,?)");
@@ -254,5 +256,13 @@ public class Database {
             System.out.println(e);
         }
         return count;
+    }
+
+    public boolean checkDuplicates(String table){
+        try {
+            PreparedStatement st = c.prepareStatement("SELECT * FROM ? WHERE 0");
+        } catch (Exception e){
+            System.out.println(e);
+        }
     }
 }
