@@ -1,5 +1,6 @@
-import java.sql.*;
-import java.util.ArrayList;
+package Controller;
+
+import Controller.Database;
 
 /**
  * Created by erikarumbold on 3/27/17.
