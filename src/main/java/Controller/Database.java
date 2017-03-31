@@ -18,20 +18,20 @@ public class Database {
             c.commit();
 
             st = c.createStatement();
-            String sql = "CREATE TABLE IF NOT EXISTS USER (ID INT PRIMARY KEY NOT NULL, USERNAME CHAR(20) NOT NULL, " +
-                    "PASSWORD CHAR(32) NOT NULL, EMAIL CHAR(32) NOT NULL, IS_ADMIN INT NOT NULL, IS_MUSICIAN INT NOT NULL);";
+            String sql = "CREATE TABLE IF NOT EXISTS USER (ID INT PRIMARY KEY NOT NULL, USERNAME CHAR(20) NOT NULL UNIQUE, " +
+                    "PASSWORD CHAR(32) NOT NULL, EMAIL CHAR(32) NOT NULL UNIQUE, IS_ADMIN INT NOT NULL, IS_MUSICIAN INT NOT NULL);";
             st.execute(sql);
 
-            sql = "CREATE TABLE IF NOT EXISTS MUSICIANDETAIL (ID INT PRIMARY KEY NOT NULL, USER_ID INT NOT NULL, " +
-                    "DESCRIPTION CHAR(400), NAME CHAR(24) NOT NULL, CITY CHAR(20), STATE CHAR(2), TWITTER CHAR(64), " +
-                    "FACEBOOK CHAR(64), SOUNDCLOUD CHAR(64));";
+            sql = "CREATE TABLE IF NOT EXISTS MUSICIANDETAIL (ID INT PRIMARY KEY NOT NULL, USER_ID INT NOT NULL UNIQUE, " +
+                    "DESCRIPTION CHAR(400), NAME CHAR(24) NOT NULL, CITY CHAR(20), STATE CHAR(2), TWITTER CHAR(64) UNIQUE, " +
+                    "FACEBOOK CHAR(64) UNIQUE, SOUNDCLOUD CHAR(64) UNIQUE);";
             st.execute(sql);
 
-            sql = "CREATE TABLE IF NOT EXISTS USERDETAIL (ID INT PRIMARY KEY NOT NULL, USER_ID INT NOT NULL, " +
+            sql = "CREATE TABLE IF NOT EXISTS USERDETAIL (ID INT PRIMARY KEY NOT NULL, USER_ID INT NOT NULL UNIQUE, " +
                     "FIRST_NAME CHAR(20) NOT NULL, LAST_NAME CHAR(20), CITY CHAR(20), STATE CHAR(2));";
             st.execute(sql);
 
-            sql = "CREATE TABLE IF NOT EXISTS EVENT (ID INT PRIMARY KEY NOT NULL, TITLE CHAR (32) NOT NULL, MONTH INT, " +
+            sql = "CREATE TABLE IF NOT EXISTS EVENT (ID INT PRIMARY KEY NOT NULL, TITLE CHAR (32) NOT NULL UNIQUE, MONTH INT, " +
                     "DAY INT, YEAR INT, HOUR INT, MINUTE INT, DESCRIPTION CHAR(400), VENUE_NAME CHAR(20), " +
                     "ADDRESS CHAR(40), CITY CHAR(20), STATE CHAR(2), ZIPCODE CHAR(5), LONGITUDE REAL, LATITUDE REAL);";
             st.execute(sql);
@@ -51,10 +51,8 @@ public class Database {
 
         try {
 
-            PreparedStatement st = c.prepareStatement("INSERT INTO EVENT (ID, TITLE, MONTH, DAY, YEAR, HOUR, MINUTE, " +
-                    "DESCRIPTION, VENUE_NAME, ADDRESS, CITY, STATE, ZIPCODE, LONGITUDE, LATITUDE) VALUES (?,?,?,?,?,?," +
-                    "?,?,?,?,?,?,?,?,?)");
-            st.setInt(1, getNumRows("EVENT"));
+            PreparedStatement st = c.prepareStatement("INSERT OR IGNORE INTO EVENT VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            st.setInt(1, getNumRows("EVENT")+1);
             st.setString(2, title);
             st.setInt(3, month);
             st.setInt(4, day);
@@ -119,10 +117,12 @@ public class Database {
         return "no";
     }
 
-    public ArrayList<String[]> selectEventByCity(String city){
+    public ArrayList<String[]> selectEventByCityState(String city, String state){
         ArrayList<String[]> results = new ArrayList<>();
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE CITY="+city);
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE CITY=? AND STATE=?");
+            st.setString(1, city);
+            st.setString(2, state);
             ResultSet rs = st.executeQuery();
             results = getResults(rs);
         } catch (Exception e) {
@@ -146,7 +146,8 @@ public class Database {
     public ArrayList<String[]> selectEventByTitle(String title){
         ArrayList<String[]> results = new ArrayList<>();
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE TITLE LIKE %"+title+"%");
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE TITLE LIKE ?");
+            st.setString(1, title);
             ResultSet rs = st.executeQuery();
             results = getResults(rs);
         } catch (Exception e) {
@@ -266,5 +267,6 @@ public class Database {
         } catch (Exception e){
             System.out.println(e);
         }
+        return true;
     }
 }
