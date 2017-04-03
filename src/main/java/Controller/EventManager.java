@@ -1,16 +1,31 @@
 package Controller;
 
-import Controller.Database;
-
 /**
  * Created by erikarumbold on 3/27/17.
  */
 public class EventManager {
 
-    public static void main(String[] args) {
+    public EventManager(){
         Database db = new Database();
-        String result = db.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
-                "The Woodlands", "123 Place", "Dover", "DE", "19901", -.5, .5);
-        System.out.println(result);
+    }
+
+    public void insertEvent(){
+
+    }
+
+    public void modifyEvent(){
+
+    }
+
+    public void selectEvent(){
+
+    }
+
+    public void deleteEvent(){
+
+    }
+
+    public static void main(String[] args) {
+        EventManager em = new EventManager();
     }
 }
