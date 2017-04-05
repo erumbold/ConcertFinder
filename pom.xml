@@ -48,6 +48,11 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.13</version>
         </dependency>
+        <depencdency>
+            <groupId>org.sql2o</groupId>
+            <artifactId>sql2o</artifactId>
+            <version>1.5.4</version>
+        </dependency>
         <dependency>
             <groupId>com.despegar</groupId>
             <artifactId>spark-test</artifactId>

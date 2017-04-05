@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.objenesis:objenesis:2.1" level="project" />
     <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.13" level="project" />
+    <orderEntry type="library" name="Maven: org.sql2o:sql2o:1.5.4" level="project" />
     <orderEntry type="library" name="Maven: com.despegar:spark-test:1.1.4" level="project" />
     <orderEntry type="library" name="Maven: com.despegar:http-java-native-client:1.0.3" level="project" />
   </component>
