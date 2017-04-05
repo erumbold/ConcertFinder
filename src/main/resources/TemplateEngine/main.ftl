@@ -21,10 +21,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/">Home</a></li>
-                        <li><a href="createUser">Create User</a></li>
-                        <li><a href="getAllUsers">Get All Users</a></li>
-                        <li><a href="updateUser">Update User</a></li>
-                        <li><a href="removeUser">Remove User</a></li>
+                        <li><a href="viewDB">View Database</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

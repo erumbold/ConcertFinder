@@ -13,7 +13,7 @@ public class Database {
     public Database(){
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:ConcertFinder.db");
+            c = DriverManager.getConnection("jdbc:sqlite:ConcertFinder2.db");
             c.setAutoCommit(false);
             c.commit();
 
@@ -786,5 +786,41 @@ public class Database {
         } catch (Exception e){
             System.out.println(e);
         }
+    }
+
+    public ArrayList<String[]> listResults()
+    {
+        ArrayList<String[]> results = new ArrayList<>();
+        try
+        {
+            PreparedStatement st = c.prepareStatement("SELECT TITLE, MONTH, DAY, YEAR, HOUR, " +
+                    "MINUTE, DESCRIPTION, VENUE_NAME, ADDRESS, CITY, STATE, ZIPCODE, LONGITUDE, LATITUDE " +
+                    "from EVENT");
+            ResultSet rs = st.executeQuery();
+            while(rs.next())
+            {
+                String[] toAdd = new String[14];
+                toAdd[0] = rs.getString("TITLE");
+                toAdd[1] = rs.getInt("MONTH") + "";
+                toAdd[2] = rs.getInt("DAY") + "";
+                toAdd[3] = rs.getInt("YEAR") + "";
+                toAdd[4] = rs.getInt("HOUR") + "";
+                toAdd[5] = rs.getInt("MINUTE") + "";
+                toAdd[6] = rs.getString("DESCRIPTION");
+                toAdd[7] = rs.getString("VENUE_NAME");
+                toAdd[8] = rs.getString("ADDRESS");
+                toAdd[9] = rs.getString("CITY");
+                toAdd[10] = rs.getString("STATE");
+                toAdd[11] = rs.getString("ZIPCODE");
+                toAdd[12] = rs.getDouble("LONGITUDE") + "";
+                toAdd[13] = rs.getDouble("LATITUDE") + "";
+                results.add(toAdd);
+            }rs.close();
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        }
+
+        return results;
     }
 }
