@@ -11,6 +11,17 @@ import static org.junit.Assert.*;
  */
 public class DBTest {
     Database db = new Database();
+
+    @Test
+    public void testUserInsert(){
+        String result = db.insertUser("erumbold", "asdfghjkl", "erumbold@ithaca.edu", 1, 0);
+        assertEquals("erumbold", result);
+        result = db.insertUser("hmargalotti", "qwertyuiop", "hmargalotti@ithaca.edu", 0, 1);
+        assertEquals("hmargalotti", result);
+        result = db.insertUser("clawrence", "123456", "clawrence@ithaca.edu", 0, 0);
+        assertEquals("clawrence", result);
+    }
+
     @Test
     public void testEventInsert(){
         String result = db.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
@@ -49,15 +60,11 @@ public class DBTest {
             assertArrayEquals(expectDelaware.get(i), result.get(i));
         }
 
-        ArrayList<String[]> expectCoachella = new ArrayList<>();                    // select title Coachella
+                            // select title Coachella
         String[] ret3 = {"Coachella", "9","23","2017","12","0","description", "Somewhere", "Out there", "Chicago", "IL",
                 "12345", "-0.5", "0.5"};
-        expectCoachella.add(0,ret3);
-        result = db.selectEventByTitle("Coachella");
-        assertEquals(expectCoachella.size(), result.size());
-        for (int i = 0; i < result.size(); i++){
-            assertArrayEquals(expectCoachella.get(i), result.get(i));
-        }
+        String res[] = db.selectEventByTitle("Coachella");
+        assertArrayEquals(ret3, res);
 
         result = db.selectEventByDate(6, 18, 2017);                 // select events on 6/18/17
         assertEquals(expectDelaware.size(), result.size());
