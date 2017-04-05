@@ -35,7 +35,6 @@ public class MainRoute {
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
 
-
         get("/viewDB", (request, response) -> {
             response.status(200);
             Map<String, Object> viewObjects = new HashMap<String, Object>();
@@ -47,6 +46,13 @@ public class MainRoute {
             response.status(200);
             return toJSON(mod.sendEvents());
         });
+
+        get("/map", (request, response) -> {
+            Map<String, Object> viewObjects = new HashMap<String, Object>();
+//            viewObjects.put("title", "Map");
+            viewObjects.put("templateName", "mapview.ftl");
+            return new ModelAndView(viewObjects, "main.ftl");
+        }, new FreeMarkerEngine());
 
     }
 
