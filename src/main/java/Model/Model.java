@@ -1,6 +1,7 @@
 package Model;
 
 import Controller.Database;
+import Controller.EventManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,27 +10,26 @@ import java.util.Map;
 
 public class Model {
     private Map<String, Object> user;
-    public Database db;
+    private EventManager em;
 
     /**
      * Constructor
      */
-    public Model()
-    {
+    public Model() {
 
         this.user = new HashMap<>();
-        this.db = new Database();
-        db.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
-                "The Woodlands", "123 Place", "Dover", "DE", "19901", -.5, .5);
-        db.insertEvent("DRAM at Ithaca College", 3, 21, 2017, 12, 0, "description",
-                "Ithaca College", "953 Danby Road", "Ithaca", "NY", "14850", -.25, .55);
-        db.insertEvent("Drake at Ithaca College", 3, 21, 2017, 12, 0, "description",
-                "Ithaca College", "953 Danby Road", "Ithaca", "NY", "14850", -.25, .55);
+        this.em = new EventManager();
+        em.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
+                "The Woodlands", "123 Place", "Dover", "DE", "19901", 39.1900301, -75.5311199);
+        em.insertEvent("DRAM at Ithaca College", 3, 21, 2017, 12, 0, "description",
+                "Ithaca College", "953 Danby Road", "Ithaca", "NY", "14850", 42.4217372, -76.4969761);
+        em.insertEvent("Drake at Ithaca College", 3, 21, 2017, 12, 0, "description",
+                "Ithaca College", "953 Danby Road", "Ithaca", "NY", "14850", 42.4217372, -76.4969761);
     }
 
     public List sendEvents()
     {
-        List<String[]> ret = new ArrayList<>(db.listResults());
+        List<String[]> ret = new ArrayList<>(em.listResults());
         return ret;
     }
 }
