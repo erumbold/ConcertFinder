@@ -20,6 +20,10 @@ public class EventManager {
         db.insertEvent(title, month, day, year, hour, minute, description, venue, address, city, state, zipCode, latitude, longitude);
     }
 
+    public List searchEvent(String query){
+
+    }
+
     public List listResults(){
         List<String[]> ret = db.listResults();
         return ret;
