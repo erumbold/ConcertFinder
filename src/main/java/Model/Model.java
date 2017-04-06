@@ -9,12 +9,13 @@ import java.util.Map;
 
 public class Model {
     private Map<String, Object> user;
-    private Database db;
+    public Database db;
 
     /**
      * Constructor
      */
-    public Model() {
+    public Model()
+    {
 
         this.user = new HashMap<>();
         this.db = new Database();
