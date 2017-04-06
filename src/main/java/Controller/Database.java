@@ -33,7 +33,7 @@ public class Database {
 
             sql = "CREATE TABLE IF NOT EXISTS EVENT (ID INT PRIMARY KEY NOT NULL, TITLE CHAR (32) NOT NULL UNIQUE, MONTH INT, " +
                     "DAY INT, YEAR INT, HOUR INT, MINUTE INT, DESCRIPTION CHAR(400), VENUE_NAME CHAR(20), " +
-                    "ADDRESS CHAR(40), CITY CHAR(20), STATE CHAR(2), ZIPCODE CHAR(5), LONGITUDE REAL, LATITUDE REAL);";
+                    "ADDRESS CHAR(40), CITY CHAR(20), STATE CHAR(2), ZIPCODE CHAR(5), LATITUDE REAL, LONGITUDE REAL);";
             st.execute(sql);
 
             sql = "CREATE TABLE IF NOT EXISTS USER_TO_EVENT (ID INT PRIMARY KEY NOT NULL, " +
@@ -563,8 +563,7 @@ public class Database {
     public String[] selectEventByTitle(String title){
         String res[] = new String[15];
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE TITLE LIKE ?");
-            st.setString(1, title);
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE TITLE LIKE %"+title+"%");
             ResultSet rs = st.executeQuery();
             ArrayList<String[]> results = getEventResults(rs);
             res = results.get(0);
