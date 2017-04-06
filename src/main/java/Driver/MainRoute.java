@@ -58,7 +58,7 @@ public class MainRoute {
                 values[i] = result;
                 System.out.println(values[i]);
             }
-            mod.db.insertEvent(values[0],Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]),
+            mod.em.insertEvent(values[0],Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]),
                     Integer.parseInt(values[4]), Integer.parseInt(values[5]), values[6], values[7], values[8], values[9],
                     values[10], values[11], Double.parseDouble(values[12]), Double.parseDouble(values[13]));
             response.status(200);
