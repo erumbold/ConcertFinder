@@ -10,7 +10,8 @@ import java.util.Map;
 
 public class Model {
     private Map<String, Object> user;
-    private EventManager em;
+    public EventManager em;
+    public Database db;
 
     /**
      * Constructor
