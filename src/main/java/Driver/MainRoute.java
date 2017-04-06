@@ -46,6 +46,10 @@ public class MainRoute {
             response.status(200);
             return toJSON(mod.sendEvents());
         });
+        get("/getJson", (request, response) -> {
+            response.status(200);
+            return mod.sendEvents();
+        });
 
         get("/map", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
