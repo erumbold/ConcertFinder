@@ -282,6 +282,7 @@ public class Database {
      * @param city
      * @param state
      * @return the associated userID
+     * @post values in USER_DETAIL table of connected database are changed
      */
     public int modifyUserDetail(int userID, String firstName, String lastName, String city, String state){
         try {
@@ -305,6 +306,7 @@ public class Database {
      * removes a user's extended information from the database
      * @param userID
      * @return the associated userID
+     * @post row removed from USER_DETAIL table of connected database
      */
     public int deleteUserDetail(int userID){
         try {
@@ -329,6 +331,7 @@ public class Database {
      * @param facebook
      * @param soundcloud
      * @return int userID
+     * @post new row in MUSICIAN_DETAIL table of connected database
      */
     public int insertMusicianDetail(int userID, String name, String description, String city, String state,
                                     String twitter, String facebook, String soundcloud){
@@ -364,6 +367,7 @@ public class Database {
      * @param facebook
      * @param soundcloud
      * @return int userID
+     * @post values for given row in MUSICIAN_DETAIL table of connected database are changed
      */
     public int modifyMusicianDetail(int userID, String name, String description, String city, String state,
                                     String twitter, String facebook, String soundcloud){
@@ -391,6 +395,7 @@ public class Database {
      * removes a musician's extended information from the database
      * @param userID
      * @return int userID
+     * @post row removed from MUSICIAN_DETAIL table in connected database
      */
     public int deleteMusicianDetail(int userID){
         try {
@@ -421,6 +426,7 @@ public class Database {
      * @param longitude
      * @param latitude
      * @return String title
+     * @post new row in EVENT table of connected database
      */
     public String insertEvent(String title, int month, int day, int year, int hour, int minute,
                               String description, String venueName, String address, String city,
@@ -472,6 +478,7 @@ public class Database {
      * @param longitude
      * @param latitude
      * @return String title
+     * @post values for given row of EVENT table are changed
      */
     public String modifyEvent(String title, int month, int day, int year, int hour, int minute,
                               String description, String venueName, String address, String city,
@@ -506,6 +513,7 @@ public class Database {
      * removes a given event from the database
      * @param title
      * @return title of deleted event
+     * @post row removed from EVENT table of connected database
      */
     public String deleteEvent(String title){
         try {
@@ -684,6 +692,7 @@ public class Database {
      * @param eventID
      * @param isOwner
      * @return int userID
+     * @post new row in USER_TO_EVENT table of connected database
      */
     public int insertUserToEvent(int userID, int eventID, int isOwner){
         try {
