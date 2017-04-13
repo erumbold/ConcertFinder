@@ -3,13 +3,20 @@ package Controller;
 import java.sql.*;
 import java.util.ArrayList;
 
+//TODO FIX MODIFY METHODS
+
 /**
+ * This class consists of a database constructor and all methods to interact with information stored in the database.
  * @author Erika Rumbold
  */
 public class Database {
     private Connection c = null;
     private Statement st = null;
 
+    /**
+     * This constructor opens a connection to the database and creates the tables (EVENT, USER, USERDETAIL,
+     * MUSICIANDETAIL, USER_TO_EVENT) if they don't already exist.
+     */
     public Database(){
         try {
             Class.forName("org.sqlite.JDBC");
@@ -47,7 +54,7 @@ public class Database {
 
     /**
      * This function gives the number of rows in a table
-     * @param table - name of table of which to count the number of rows
+     * @param table name of table of which to count the number of rows
      * @return count - number of rows in table
      */
     public int getNumRows(String table){
@@ -67,11 +74,11 @@ public class Database {
 
     /**
      * inserts a new user into the database if the username, password, or email don't already exist
-     * @param username
-     * @param password
-     * @param email
-     * @param isAdmin
-     * @param isMusician
+     * @param username desired username
+     * @param password associated password
+     * @param email associated email
+     * @param isAdmin Admin status
+     * @param isMusician Musician status
      * @return String username
      * @post new row in USER table in connected database
      */
@@ -96,19 +103,21 @@ public class Database {
 
     /**
      * updates the attribute values of a given user, cannot change user type (normal, admin, musician)
-     * @param username
-     * @param password
-     * @param email
+     * @param newUsername new username
+     * @param password new password
+     * @param email new email
+     * @param oldUsername username to change
      * @return String username
      * @post values for given row in USER table of connected database are changed
      */
-    public String modifyUser(String username, String password, String email){
+    public String modifyUser(String newUsername, String password, String email, String oldUsername){
         try {
-            PreparedStatement st = c.prepareStatement("UPDATE USER SET USERNAME=?, PASSWORD=?, EMAIL=?");
-            st.setString(1, username);
+            PreparedStatement st = c.prepareStatement("UPDATE USER SET USERNAME=?, PASSWORD=?, EMAIL=? WHERE USERNAME=?");
+            st.setString(1, newUsername);
             st.setString(2, password);
             st.setString(3, email);
-            return username;
+            st.setString(4, oldUsername);
+            return newUsername;
         } catch (Exception e){
             System.out.println(e);
         }
@@ -117,7 +126,7 @@ public class Database {
 
     /**
      * removes a username from the database
-     * @param username
+     * @param username name of user to remove
      * @return String username
      * @post row removed from USER table in connected database
      */
@@ -141,7 +150,7 @@ public class Database {
 
     /**
      * finds all user information associated with a given username
-     * @param username
+     * @param username user to find
      * @return [ID, username, password, email, admin status, musician status]
      */
     public String[] selectUserByUsername(String username){
@@ -159,7 +168,7 @@ public class Database {
 
     /**
      * finds all user information associated with a given email
-     * @param email
+     * @param email email of user to find
      * @return [ID, username, password, email, admin status, musician status]
      */
     public String[] selectUserByEmail(String email){
@@ -177,7 +186,7 @@ public class Database {
 
     /**
      * finds all user information associated with a given ID
-     * @param id
+     * @param id ID of user to find
      * @return [ID, username, password, email, admin status, musician status]
      */
     public String[] selectUserByID(int id){
@@ -195,7 +204,7 @@ public class Database {
 
     /**
      * finds the username of a given event's owner
-     * @param event
+     * @param event event of which to find the owner
      * @return owner's username as a String
      */
     public String selectMusicianByEvent(String event){
@@ -215,7 +224,7 @@ public class Database {
 
     /**
      * finds all users that are admins
-     * @return ArrayList<[ID, username, password, email, admin status, musician status]> for each user
+     * @return ArrayList of arrays[ID, username, password, email, admin status, musician status] for each user
      */
     public ArrayList<String[]> selectUserAdmins(){
         ArrayList<String[]> results = new ArrayList<>();
@@ -231,7 +240,7 @@ public class Database {
 
     /**
      * finds all users that are musicians
-     * @return ArrayList<[ID, username, password, email, admin status, musician status]> for each user
+     * @return ArrayList of arrays[ID, username, password, email, admin status, musician status] for each user
      */
     public ArrayList<String[]> selectUserMusicians(){
         ArrayList<String[]> results = new ArrayList<>();
@@ -247,13 +256,13 @@ public class Database {
 
     /**
      * inserts extended user information, specific for general users, into the database
-     * @param userID
-     * @param firstName
-     * @param lastName
-     * @param city
-     * @param state
+     * @param userID ID of relevant user
+     * @param firstName user's first name
+     * @param lastName user's last name
+     * @param city user's home city
+     * @param state user's home state
      * @return int the associated userID
-     * @post new row in USER_DETAIL table of connected database
+     * @post new row in USERDETAIL table of connected database
      */
     public int insertUserDetail(int userID, String firstName, String lastName, String city, String state){
         try {
@@ -276,23 +285,23 @@ public class Database {
 
     /**
      * updates the attribute values of a user's extended information
-     * @param userID
-     * @param firstName
-     * @param lastName
-     * @param city
-     * @param state
+     * @param userID user's ID
+     * @param firstName user's new first name
+     * @param lastName new last name
+     * @param city new home city
+     * @param state new home state
      * @return the associated userID
-     * @post values in USER_DETAIL table of connected database are changed
+     * @post values in USERDETAIL table of connected database are changed
      */
     public int modifyUserDetail(int userID, String firstName, String lastName, String city, String state){
         try {
-            PreparedStatement st = c.prepareStatement("UPDATE USERDETAIL SET USER_ID=?, FIRST_NAME=?, LAST_NAME=?, " +
-                    "CITY=?, STATE=?");
-            st.setInt(1, userID);
-            st.setString(2, firstName);
-            st.setString(3, lastName);
-            st.setString(4, city);
-            st.setString(5, state);
+            PreparedStatement st = c.prepareStatement("UPDATE USERDETAIL SET FIRST_NAME=?, LAST_NAME=?, " +
+                    "CITY=?, STATE=? WHERE USER_ID=?");
+            st.setString(1, firstName);
+            st.setString(2, lastName);
+            st.setString(3, city);
+            st.setString(4, state);
+            st.setInt(5, userID);
             st.executeUpdate();
             c.commit();
             return userID;
@@ -304,9 +313,9 @@ public class Database {
 
     /**
      * removes a user's extended information from the database
-     * @param userID
+     * @param userID ID of user to delete
      * @return the associated userID
-     * @post row removed from USER_DETAIL table of connected database
+     * @post row removed from USERDETAIL table of connected database
      */
     public int deleteUserDetail(int userID){
         try {
@@ -322,16 +331,16 @@ public class Database {
 
     /**
      * inserts extended musician information, specific for musician users, in the database
-     * @param userID
-     * @param name
-     * @param description
-     * @param city
-     * @param state
-     * @param twitter
-     * @param facebook
-     * @param soundcloud
+     * @param userID associated user ID
+     * @param name musician name
+     * @param description description of musician
+     * @param city musician's home city
+     * @param state musician's home state
+     * @param twitter musician's twitter url
+     * @param facebook musician's facebook url
+     * @param soundcloud musician's soundcloud url
      * @return int userID
-     * @post new row in MUSICIAN_DETAIL table of connected database
+     * @post new row in MUSICIANDETAIL table of connected database
      */
     public int insertMusicianDetail(int userID, String name, String description, String city, String state,
                                     String twitter, String facebook, String soundcloud){
@@ -358,30 +367,30 @@ public class Database {
 
     /**
      * updates the attribute values of a musician's extended information
-     * @param userID
-     * @param name
-     * @param description
-     * @param city
-     * @param state
-     * @param twitter
-     * @param facebook
-     * @param soundcloud
+     * @param userID ID of user to be changed
+     * @param name new musician name
+     * @param description updated description
+     * @param city new home city
+     * @param state new home state
+     * @param twitter new twitter url
+     * @param facebook new facebook url
+     * @param soundcloud new soundcloud url
      * @return int userID
-     * @post values for given row in MUSICIAN_DETAIL table of connected database are changed
+     * @post values for given row in MUSICIANDETAIL table of connected database are changed
      */
     public int modifyMusicianDetail(int userID, String name, String description, String city, String state,
                                     String twitter, String facebook, String soundcloud){
         try {
-            PreparedStatement st = c.prepareStatement("UPDATE MUSICANDETAIL SET USER_ID=?, NAME=?, DESCRIPTION=?, " +
-                    "CITY=?, STATE=?, TWITTER=?, FACEBOOK=?, SOUNDCLOUD=?");
-            st.setInt(1, userID);
-            st.setString(2, name);
-            st.setString(3, description);
-            st.setString(4, city);
-            st.setString(5, state);
-            st.setString(6, twitter);
-            st.setString(7, facebook);
-            st.setString(8, soundcloud);
+            PreparedStatement st = c.prepareStatement("UPDATE MUSICANDETAIL SET NAME=?, DESCRIPTION=?, " +
+                    "CITY=?, STATE=?, TWITTER=?, FACEBOOK=?, SOUNDCLOUD=? WHERE USER_ID=?");
+            st.setString(1, name);
+            st.setString(2, description);
+            st.setString(3, city);
+            st.setString(4, state);
+            st.setString(5, twitter);
+            st.setString(6, facebook);
+            st.setString(7, soundcloud);
+            st.setInt(8, userID);
             st.executeUpdate();
             c.commit();
             return userID;
@@ -393,9 +402,9 @@ public class Database {
 
     /**
      * removes a musician's extended information from the database
-     * @param userID
+     * @param userID ID of user to be deleted
      * @return int userID
-     * @post row removed from MUSICIAN_DETAIL table in connected database
+     * @post row removed from MUSICIANDETAIL table in connected database
      */
     public int deleteMusicianDetail(int userID){
         try {
@@ -411,20 +420,20 @@ public class Database {
 
     /**
      * inserts a new event into the database if the title of the event is not already in the database
-     * @param title
-     * @param month
-     * @param day
-     * @param year
-     * @param hour
-     * @param minute
-     * @param description
-     * @param venueName
-     * @param address
-     * @param city
-     * @param state
-     * @param zipCode
-     * @param longitude
-     * @param latitude
+     * @param title event title
+     * @param month month of event
+     * @param day day of event
+     * @param year year of event
+     * @param hour hour of event
+     * @param minute minute of event
+     * @param description event description
+     * @param venueName venue of event
+     * @param address venue's street address
+     * @param city venue's city
+     * @param state venue's state
+     * @param zipCode venue's zip code
+     * @param longitude venue's longitude coordinate
+     * @param latitude venue's latitude coordinate
      * @return String title
      * @post new row in EVENT table of connected database
      */
@@ -463,29 +472,29 @@ public class Database {
 
     /**
      * updates the attribute values of a given event
-     * @param title
-     * @param month
-     * @param day
-     * @param year
-     * @param hour
-     * @param minute
-     * @param description
-     * @param venueName
-     * @param address
-     * @param city
-     * @param state
-     * @param zipCode
-     * @param longitude
-     * @param latitude
+     * @param title updated event title
+     * @param month updated month of event
+     * @param day updated day of event
+     * @param year updated year of event
+     * @param hour updated hour of event
+     * @param minute updated minute of event
+     * @param description updated event description
+     * @param venueName updated venue of event
+     * @param address updated venue's street address
+     * @param city updated venue's city
+     * @param state updated venue's state
+     * @param zipCode updated venue's zip code
+     * @param longitude updated venue's longitude coordinate
+     * @param latitude updated venue's latitude coordinate
      * @return String title
      * @post values for given row of EVENT table are changed
      */
-    public String modifyEvent(String title, int month, int day, int year, int hour, int minute,
+    public String modifyEvent(int id, String title, int month, int day, int year, int hour, int minute,
                               String description, String venueName, String address, String city,
                               String state, String zipCode, double longitude, double latitude){
         try {
             PreparedStatement st = c.prepareStatement("UPDATE EVENT SET TITLE=?, MONTH=?, DAY=?, YEAR=?, HOUR=?, " +
-                    "MINUTE=?, DESCRIPTION=?, VENUE_NAME=?, ADDRESS=?, CITY=?, STATE=?, ZIPCODE=?, LONGITUDE=?, LATITUDE=?");
+                    "MINUTE=?, DESCRIPTION=?, VENUE_NAME=?, ADDRESS=?, CITY=?, STATE=?, ZIPCODE=?, LONGITUDE=?, LATITUDE=? WHERE ID=?");
             st.setString(1, title);
             st.setInt(2, month);
             st.setInt(3, day);
@@ -500,6 +509,7 @@ public class Database {
             st.setString(12, zipCode);
             st.setDouble(13, longitude);
             st.setDouble(14, latitude);
+            st.setInt(15, id);
             st.executeUpdate();
             c.commit();
             return title;
@@ -511,7 +521,7 @@ public class Database {
 
     /**
      * removes a given event from the database
-     * @param title
+     * @param title title of event to delete
      * @return title of deleted event
      * @post row removed from EVENT table of connected database
      */
@@ -529,10 +539,10 @@ public class Database {
 
     /**
      * finds all events in a given city and state
-     * @param city
-     * @param state
-     * @return ArrayList<[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
-     * zipCode, longitude, latitude]> for each event
+     * @param city name of city in which to find events
+     * @param state name of state in which to find events
+     * @return ArrayList of arrays[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
+     * zipCode, longitude, latitude] for each event
      */
     public ArrayList<String[]> selectEventByCityState(String city, String state){
         ArrayList<String[]> results = new ArrayList<>();
@@ -550,9 +560,9 @@ public class Database {
 
     /**
      * finds all events in a given zip code
-     * @param zip
-     * @return ArrayList<[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
-     * zipCode, longitude, latitude]> for each event
+     * @param zip zip code in which to find events
+     * @return ArrayList of arrays[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
+     * zipCode, longitude, latitude] for each event
      */
     public ArrayList<String[]> selectEventByZipCode(String zip){
         ArrayList<String[]> results = new ArrayList<>();
@@ -568,8 +578,8 @@ public class Database {
 
     /**
      * finds information associated with a given event title
-     * @param title
-     * @return [ID, title, month, day, year, hour, minute, description, venueName, address, city, state, zipCode,
+     * @param title name of event to find
+     * @return array [ID, title, month, day, year, hour, minute, description, venueName, address, city, state, zipCode,
      * longitude, latitude]
      */
     public String[] selectEventByTitle(String title){
@@ -587,9 +597,9 @@ public class Database {
 
     /**
      * finds all events attended by a given user
-     * @param user
-     * @return ArrayList<[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
-     * zipCode, longitude, latitude]> for each event
+     * @param user username of owner of the events to find
+     * @return ArrayList of arrays[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
+     * zipCode, longitude, latitude] for each event
      */
     public ArrayList<String[]> selectEventByUser(String user){
         ArrayList<String[]> events = new ArrayList<>();
@@ -613,11 +623,11 @@ public class Database {
 
     /**
      * finds all events on a given date
-     * @param month
-     * @param day
-     * @param year
-     * @return ArrayList<[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
-     * zipCode, longitude, latitude]> for each event
+     * @param month month of events
+     * @param day day of events
+     * @param year year of events
+     * @return ArrayList of arrays[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
+     * zipCode, longitude, latitude] for each event
      */
     public ArrayList<String[]> selectEventByDate(int month, int day, int year){
         ArrayList<String[]> results = new ArrayList<>();
@@ -633,9 +643,9 @@ public class Database {
 
     /**
      * finds all events in a given month
-     * @param month
-     * @return ArrayList<[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
-     * zipCode, longitude, latitude]> for each event
+     * @param month month of events
+     * @return ArrayList of arrays[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
+     * zipCode, longitude, latitude] for each event
      */
     public ArrayList<String[]> selectEventByMonth(int month){
         ArrayList<String[]> results = new ArrayList<>();
@@ -651,9 +661,9 @@ public class Database {
 
     /**
      * finds all events in a given year
-     * @param year
-     * @return ArrayList<[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
-     * zipCode, longitude, latitude]> for each event
+     * @param year year of events
+     * @return ArrayList of arrays[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
+     * zipCode, longitude, latitude] for each event
      */
     public ArrayList<String[]> selectEventByYear(int year){
         ArrayList<String[]> results = new ArrayList<>();
@@ -669,7 +679,7 @@ public class Database {
 
     /**
      * finds the ID of an event, given its title
-     * @param title
+     * @param title title of event to find
      * @return int eventID
      */
     public int selectEventIDbyTitle(String title){
@@ -688,9 +698,9 @@ public class Database {
 
     /**
      * inserts a new user-to-event relationship to the database
-     * @param userID
-     * @param eventID
-     * @param isOwner
+     * @param userID ID of user to connect
+     * @param eventID ID of event to connect
+     * @param isOwner status of given userID's ownership of the event
      * @return int userID
      * @post new row in USER_TO_EVENT table of connected database
      */
@@ -713,9 +723,9 @@ public class Database {
 
     /**
      * retrieves all event attribute values for each result in a given ResultSet
-     * @param rs
-     * @return ArrayList<[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
-     * zipCode, longitude, latitude]> for each event
+     * @param rs SQLite query ResultSet from which to extract data
+     * @return ArrayList[ID, title, month, day, year, hour, minute, description, venueName, address, city, state,
+     * zipCode, longitude, latitude] for each event
      */
     public ArrayList<String[]> getEventResults(ResultSet rs){
         ArrayList<String[]> results = new ArrayList<>();
@@ -748,8 +758,8 @@ public class Database {
 
     /**
      * retrieves all user attribute values for each result in a given ResultSet
-     * @param rs
-     * @return ArrayList<[ID, username, password, email, admin status, musician status]> for each event
+     * @param rs SQLite query ResultSet from which to extract data
+     * @return ArrayList[ID, username, password, email, admin status, musician status] for each event
      */
     public ArrayList<String[]> getUserResults(ResultSet rs){
         ArrayList<String[]> results = new ArrayList<>();
@@ -773,7 +783,7 @@ public class Database {
 
     /**
      * retrieves userIDs from a ResultSet from a user-to-event table search
-     * @param rs
+     * @param rs SQLite query ResultSet from which to extract data
      * @return ArrayList of userIDs
      */
     public ArrayList<Integer> getUTOEResults(ResultSet rs){
@@ -800,6 +810,11 @@ public class Database {
         }
     }
 
+    /**
+     * gets all rows in EVENT table of connected database
+     * @return ArrayList of arrays[title, month, day, year, hour, minute, description, venue name, address, city, state,
+     * zip code, longitude, latitude]
+     */
     public ArrayList<String[]> listResults()
     {
         ArrayList<String[]> results = new ArrayList<>();

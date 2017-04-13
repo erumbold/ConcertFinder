@@ -2,39 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67d49459-8657-4392-93c2-63ce2a66c2a8" name="Default" comment="update Javadoc comments again">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ConcertFinder.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_despegar_http_java_native_client_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_despegar_spark_test_1_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sparkjava_spark_core_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sparkjava_spark_template_freemarker_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_easymock_easymock_3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_server_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_servlet_9_3_6_v20151106.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sql2o_sql2o_1_5_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_7_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Database.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Database.java" />
     </list>
@@ -64,8 +31,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/EventManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding />
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#1161#1162#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,7 +44,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-              <folding />
+              <folding>
+                <element signature="e#0#2536#0" expanded="false" />
+                <element signature="e#1099#1100#0" expanded="false" />
+                <element signature="e#1164#1165#0" expanded="false" />
+                <element signature="e#1359#1360#0" expanded="false" />
+                <element signature="e#1409#1410#0" expanded="false" />
+                <element signature="e#2251#2252#0" expanded="false" />
+                <element signature="e#2301#2302#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,39 +60,41 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="15.377219">
-              <caret line="694" column="65" selection-start-line="694" selection-start-column="65" selection-end-line="694" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.32357472">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <marker date="1492092369000" expanded="true" signature="479:709" placeholder="CREATE TABLE... IF" />
-                <marker date="1492092369000" expanded="true" signature="762:1068" placeholder="CREATE TABLE... IF" />
-                <marker date="1492092369000" expanded="true" signature="1121:1322" placeholder="CREATE TABLE... IF" />
-                <marker date="1492092369000" expanded="true" signature="1375:1712" placeholder="CREATE TABLE... IF" />
-                <marker date="1492092369000" expanded="true" signature="1765:1928" placeholder="CREATE TABLE... IF" />
-                <marker date="1492092369000" expanded="true" signature="2371:2385" placeholder="SELECT * FRO... missingValue" />
-                <marker date="1492092369000" expanded="true" signature="4133:4180" placeholder="UPDATE USER " />
-                <marker date="1492092369000" expanded="true" signature="4788:4820" placeholder="DELETE FROM " />
-                <marker date="1492092369000" expanded="true" signature="5603:5638" placeholder="SELECT * FRO... USER" />
-                <marker date="1492092369000" expanded="true" signature="6240:6272" placeholder="SELECT * FRO... USER" />
-                <marker date="1492092369000" expanded="true" signature="6856:6885" placeholder="SELECT * FRO... USER" />
-                <marker date="1492092369000" expanded="true" signature="7458:7523" placeholder="SELECT USER_... USER_TO_EVENT" />
-                <marker date="1492092369000" expanded="true" signature="8165:8200" placeholder="SELECT * FRO... USER" />
-                <marker date="1492092369000" expanded="true" signature="8740:8778" placeholder="SELECT * FRO... USER" />
-                <marker date="1492092369000" expanded="true" signature="10503:10603" placeholder="UPDATE USERD... " />
-                <marker date="1492092369000" expanded="true" signature="11296:11333" placeholder="DELETE FROM " />
-                <marker date="1492092369000" expanded="true" signature="13530:13666" placeholder="UPDATE MUSIC... " />
-                <marker date="1492092369000" expanded="true" signature="14476:14517" placeholder="DELETE FROM " />
-                <marker date="1492092369000" expanded="true" signature="17374:17558" placeholder="UPDATE EVENT... " />
-                <marker date="1492092369000" expanded="true" signature="18558:18588" placeholder="DELETE FROM " />
-                <marker date="1492092369000" expanded="true" signature="19265:19309" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="20018:20052" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="20658:20706" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="21397:21459" placeholder="SELECT EVENT... USER_TO_EVENT" />
-                <marker date="1492092369000" expanded="true" signature="21702:21732" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="22543:22610" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="23249:23281" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="23917:23948" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="24435:24468" placeholder="SELECT ID FR... EVENT" />
-                <marker date="1492092369000" expanded="true" signature="28856:29038" placeholder="SELECT TITLE... " />
+                <element signature="imports" expanded="true" />
+                <marker date="1492099204000" expanded="true" signature="815:1045" placeholder="CREATE TABLE... IF" />
+                <marker date="1492099204000" expanded="true" signature="1098:1404" placeholder="CREATE TABLE... IF" />
+                <marker date="1492099204000" expanded="true" signature="1457:1658" placeholder="CREATE TABLE... IF" />
+                <marker date="1492099204000" expanded="true" signature="1711:2048" placeholder="CREATE TABLE... IF" />
+                <marker date="1492099204000" expanded="true" signature="2101:2264" placeholder="CREATE TABLE... IF" />
+                <marker date="1492099204000" expanded="true" signature="2705:2719" placeholder="SELECT * FRO... missingValue" />
+                <marker date="1492099204000" expanded="true" signature="4657:4721" placeholder="UPDATE USER " />
+                <marker date="1492099204000" expanded="true" signature="5400:5432" placeholder="DELETE FROM " />
+                <marker date="1492099204000" expanded="true" signature="6228:6263" placeholder="SELECT * FRO... USER" />
+                <marker date="1492099204000" expanded="true" signature="6887:6919" placeholder="SELECT * FRO... USER" />
+                <marker date="1492099204000" expanded="true" signature="7522:7551" placeholder="SELECT * FRO... USER" />
+                <marker date="1492099204000" expanded="true" signature="8157:8222" placeholder="SELECT USER_... USER_TO_EVENT" />
+                <marker date="1492099204000" expanded="true" signature="8872:8907" placeholder="SELECT * FRO... USER" />
+                <marker date="1492099204000" expanded="true" signature="9455:9493" placeholder="SELECT * FRO... USER" />
+                <marker date="1492099204000" expanded="true" signature="11381:11486" placeholder="UPDATE USERD... " />
+                <marker date="1492099204000" expanded="true" signature="12199:12236" placeholder="DELETE FROM " />
+                <marker date="1492099204000" expanded="true" signature="14748:14889" placeholder="UPDATE MUSIC... " />
+                <marker date="1492099204000" expanded="true" signature="15723:15764" placeholder="DELETE FROM " />
+                <marker date="1492099204000" expanded="true" signature="19223:19407" placeholder="UPDATE EVENT... " />
+                <marker date="1492099204000" expanded="true" signature="19223:19418" placeholder="UPDATE EVENT... " />
+                <marker date="1492099204000" expanded="true" signature="20474:20504" placeholder="DELETE FROM " />
+                <marker date="1492099204000" expanded="true" signature="21264:21308" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="22058:22092" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="22726:22774" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="23513:23575" placeholder="SELECT EVENT... USER_TO_EVENT" />
+                <marker date="1492099204000" expanded="true" signature="23818:23848" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="24712:24779" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="25442:25474" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="26133:26164" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="26674:26707" placeholder="SELECT ID FR... EVENT" />
+                <marker date="1492099204000" expanded="true" signature="31567:31749" placeholder="SELECT TITLE... " />
               </folding>
             </state>
           </provider>
@@ -126,9 +105,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,10 +114,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Driver/MainRoute.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -240,7 +215,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -257,8 +232,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files">
@@ -548,119 +523,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/Public/css/css" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/ConcertFinder.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/pom.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/Controller/Database.class</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/TemplateEngine/addEvent.ftl</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.MainRoute">
     <configuration default="false" name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -1085,6 +947,7 @@
       <workItem from="1491485737468" duration="908000" />
       <workItem from="1491496992342" duration="67000" />
       <workItem from="1492090265566" duration="2094000" />
+      <workItem from="1492098735819" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="Add git ignore and logger">
       <created>1490142360729</created>
@@ -1138,7 +1001,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31639000" />
+    <option name="totallyTimeSpent" value="32057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1155,21 +1018,18 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5568182" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.50500715" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34517047" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34375" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49499285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1177,7 +1037,10 @@
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5568182" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34375" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1247,9 +1110,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1280,36 +1141,38 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <marker date="1492092369000" expanded="true" signature="479:709" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="762:1068" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="1121:1322" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="1375:1712" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="1765:1928" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="2371:2385" placeholder="SELECT * FRO... missingValue" />
-            <marker date="1492092369000" expanded="true" signature="4133:4180" placeholder="UPDATE USER " />
-            <marker date="1492092369000" expanded="true" signature="4788:4820" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="5603:5638" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="6240:6272" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="6856:6885" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="7458:7523" placeholder="SELECT USER_... USER_TO_EVENT" />
-            <marker date="1492092369000" expanded="true" signature="8165:8200" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="8740:8778" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="10503:10603" placeholder="UPDATE USERD... " />
-            <marker date="1492092369000" expanded="true" signature="11296:11333" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="13530:13666" placeholder="UPDATE MUSIC... " />
-            <marker date="1492092369000" expanded="true" signature="14476:14517" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="17374:17558" placeholder="UPDATE EVENT... " />
-            <marker date="1492092369000" expanded="true" signature="18558:18588" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="19265:19309" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="20018:20052" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="20658:20706" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="21397:21459" placeholder="SELECT EVENT... USER_TO_EVENT" />
-            <marker date="1492092369000" expanded="true" signature="21702:21732" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="22543:22610" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="23249:23281" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="23917:23948" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="24435:24468" placeholder="SELECT ID FR... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="28856:29038" placeholder="SELECT TITLE... " />
+            <element signature="imports" expanded="true" />
+            <marker date="1492099204000" expanded="true" signature="815:1045" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="1098:1404" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="1457:1658" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="1711:2048" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="2101:2264" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="2705:2719" placeholder="SELECT * FRO... missingValue" />
+            <marker date="1492099204000" expanded="true" signature="4657:4721" placeholder="UPDATE USER " />
+            <marker date="1492099204000" expanded="true" signature="5400:5432" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="6228:6263" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="6887:6919" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="7522:7551" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="8157:8222" placeholder="SELECT USER_... USER_TO_EVENT" />
+            <marker date="1492099204000" expanded="true" signature="8872:8907" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="9455:9493" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="11381:11486" placeholder="UPDATE USERD... " />
+            <marker date="1492099204000" expanded="true" signature="12199:12236" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="14748:14889" placeholder="UPDATE MUSIC... " />
+            <marker date="1492099204000" expanded="true" signature="15723:15764" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="19223:19407" placeholder="UPDATE EVENT... " />
+            <marker date="1492099204000" expanded="true" signature="19223:19418" placeholder="UPDATE EVENT... " />
+            <marker date="1492099204000" expanded="true" signature="20474:20504" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="21264:21308" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="22058:22092" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="22726:22774" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="23513:23575" placeholder="SELECT EVENT... USER_TO_EVENT" />
+            <marker date="1492099204000" expanded="true" signature="23818:23848" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="24712:24779" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="25442:25474" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="26133:26164" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="26674:26707" placeholder="SELECT ID FR... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="31567:31749" placeholder="SELECT TITLE... " />
           </folding>
         </state>
       </provider>
@@ -1568,7 +1431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1576,7 +1438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1584,7 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1592,7 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1600,9 +1459,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1610,25 +1467,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Driver/MainRoute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/EventManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#1161#1162#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1636,7 +1492,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#0#2536#0" expanded="false" />
+            <element signature="e#1099#1100#0" expanded="false" />
+            <element signature="e#1164#1165#0" expanded="false" />
+            <element signature="e#1359#1360#0" expanded="false" />
+            <element signature="e#1409#1410#0" expanded="false" />
+            <element signature="e#2251#2252#0" expanded="false" />
+            <element signature="e#2301#2302#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1650,39 +1514,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="15.377219">
-          <caret line="694" column="65" selection-start-line="694" selection-start-column="65" selection-end-line="694" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.32357472">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <marker date="1492092369000" expanded="true" signature="479:709" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="762:1068" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="1121:1322" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="1375:1712" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="1765:1928" placeholder="CREATE TABLE... IF" />
-            <marker date="1492092369000" expanded="true" signature="2371:2385" placeholder="SELECT * FRO... missingValue" />
-            <marker date="1492092369000" expanded="true" signature="4133:4180" placeholder="UPDATE USER " />
-            <marker date="1492092369000" expanded="true" signature="4788:4820" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="5603:5638" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="6240:6272" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="6856:6885" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="7458:7523" placeholder="SELECT USER_... USER_TO_EVENT" />
-            <marker date="1492092369000" expanded="true" signature="8165:8200" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="8740:8778" placeholder="SELECT * FRO... USER" />
-            <marker date="1492092369000" expanded="true" signature="10503:10603" placeholder="UPDATE USERD... " />
-            <marker date="1492092369000" expanded="true" signature="11296:11333" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="13530:13666" placeholder="UPDATE MUSIC... " />
-            <marker date="1492092369000" expanded="true" signature="14476:14517" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="17374:17558" placeholder="UPDATE EVENT... " />
-            <marker date="1492092369000" expanded="true" signature="18558:18588" placeholder="DELETE FROM " />
-            <marker date="1492092369000" expanded="true" signature="19265:19309" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="20018:20052" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="20658:20706" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="21397:21459" placeholder="SELECT EVENT... USER_TO_EVENT" />
-            <marker date="1492092369000" expanded="true" signature="21702:21732" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="22543:22610" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="23249:23281" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="23917:23948" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="24435:24468" placeholder="SELECT ID FR... EVENT" />
-            <marker date="1492092369000" expanded="true" signature="28856:29038" placeholder="SELECT TITLE... " />
+            <element signature="imports" expanded="true" />
+            <marker date="1492099204000" expanded="true" signature="815:1045" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="1098:1404" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="1457:1658" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="1711:2048" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="2101:2264" placeholder="CREATE TABLE... IF" />
+            <marker date="1492099204000" expanded="true" signature="2705:2719" placeholder="SELECT * FRO... missingValue" />
+            <marker date="1492099204000" expanded="true" signature="4657:4721" placeholder="UPDATE USER " />
+            <marker date="1492099204000" expanded="true" signature="5400:5432" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="6228:6263" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="6887:6919" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="7522:7551" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="8157:8222" placeholder="SELECT USER_... USER_TO_EVENT" />
+            <marker date="1492099204000" expanded="true" signature="8872:8907" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="9455:9493" placeholder="SELECT * FRO... USER" />
+            <marker date="1492099204000" expanded="true" signature="11381:11486" placeholder="UPDATE USERD... " />
+            <marker date="1492099204000" expanded="true" signature="12199:12236" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="14748:14889" placeholder="UPDATE MUSIC... " />
+            <marker date="1492099204000" expanded="true" signature="15723:15764" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="19223:19407" placeholder="UPDATE EVENT... " />
+            <marker date="1492099204000" expanded="true" signature="19223:19418" placeholder="UPDATE EVENT... " />
+            <marker date="1492099204000" expanded="true" signature="20474:20504" placeholder="DELETE FROM " />
+            <marker date="1492099204000" expanded="true" signature="21264:21308" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="22058:22092" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="22726:22774" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="23513:23575" placeholder="SELECT EVENT... USER_TO_EVENT" />
+            <marker date="1492099204000" expanded="true" signature="23818:23848" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="24712:24779" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="25442:25474" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="26133:26164" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="26674:26707" placeholder="SELECT ID FR... EVENT" />
+            <marker date="1492099204000" expanded="true" signature="31567:31749" placeholder="SELECT TITLE... " />
           </folding>
         </state>
       </provider>
