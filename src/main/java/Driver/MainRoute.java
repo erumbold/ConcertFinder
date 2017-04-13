@@ -29,7 +29,7 @@ public class MainRoute {
 
         get("/", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
-            viewObjects.put("title", "Welcome to Spark Project");
+            viewObjects.put("title", "Welcome to ConcertFinder");
             viewObjects.put("templateName", "home.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
