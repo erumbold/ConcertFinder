@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 /**
- * Created by erikarumbold on 3/28/17.
+ * @author Erika Rumbold
  */
 public class Database {
     private Connection c = null;
@@ -73,6 +73,7 @@ public class Database {
      * @param isAdmin
      * @param isMusician
      * @return String username
+     * @post new row in USER table in connected database
      */
     public String insertUser(String username, String password, String email, int isAdmin, int isMusician){
         try {
@@ -99,6 +100,7 @@ public class Database {
      * @param password
      * @param email
      * @return String username
+     * @post values for given row in USER table of connected database are changed
      */
     public String modifyUser(String username, String password, String email){
         try {
@@ -117,6 +119,7 @@ public class Database {
      * removes a username from the database
      * @param username
      * @return String username
+     * @post row removed from USER table in connected database
      */
     public String deleteUser(String username){
         try {
@@ -250,6 +253,7 @@ public class Database {
      * @param city
      * @param state
      * @return int the associated userID
+     * @post new row in USER_DETAIL table of connected database
      */
     public int insertUserDetail(int userID, String firstName, String lastName, String city, String state){
         try {

@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="ConcertFinder" uuid="b4faab33-e144-46c2-bb7c-d448c7105da1">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="EVENT" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="TITLE" sqlType="CHAR (32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="MONTH" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="DAY" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="YEAR" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="HOUR" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="MINUTE" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="DESCRIPTION" sqlType="CHAR(400)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="VENUE_NAME" sqlType="CHAR(20)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="ADDRESS" sqlType="CHAR(40)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="CITY" sqlType="CHAR(20)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="STATE" sqlType="CHAR(2)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="ZIPCODE" sqlType="CHAR(5)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="LONGITUDE" sqlType="REAL" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="LATITUDE" sqlType="REAL" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="MUSICIANDETAIL" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="USER_ID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="DESCRIPTION" sqlType="CHAR(400)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="NAME" sqlType="CHAR(24)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="CITY" sqlType="CHAR(20)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="STATE" sqlType="CHAR(2)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="TWITTER" sqlType="CHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="FACEBOOK" sqlType="CHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="SOUNDCLOUD" sqlType="CHAR(64)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="USER" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="USERNAME" sqlType="CHAR(20)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="CHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="EMAIL" sqlType="CHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="IS_ADMIN" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="IS_MUSICIAN" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="USERDETAIL" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="USER_ID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="FIRST_NAME" sqlType="CHAR(20)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="LAST_NAME" sqlType="CHAR(20)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="CITY" sqlType="CHAR(20)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="STATE" sqlType="CHAR(2)" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="USER_TO_EVENT" schema="" catalog="" type="TABLE">
+      <column name="ID" sqlType="" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="USER_ID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="EVENT_ID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="IS_OWNER" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
   </data-source>
 </component>

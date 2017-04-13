@@ -80,9 +80,9 @@ function getEvent(){
     $.getJSON("getevents", function(result){
         $.each(result, function(key, val){
             //$("div").append(field + " ");
-            //console.log(key);
-            //console.log(val);
-            addMarker(val);
+            console.log(key);
+            console.log(val);
+            addMarker(val)
         });
     });
 }
@@ -91,16 +91,12 @@ function addMarker(val){
     console.log("Yes!" + val);
     var latt;
     var lngg;
-
     //if(his.includes(val[12])+parseFloat(val[13])){
     //    latt = parseFloat(val[12])+0.01;
     //    lngg = parseFloat(val[13])+0.01;
     //}else{
-
-    latt = parseFloat(val[12]);
-
-    lngg = parseFloat(val[13]);
-
+        latt = parseFloat(val[12]);
+        lngg = parseFloat(val[13]);
     //    his.push(parseFloat(val[12])+parseFloat(val[13]));
     //}
     var demoLoF = {lat:latt, lng:lngg};
@@ -110,6 +106,7 @@ function addMarker(val){
         label: "!",
         title: "test",
         map: map
+
     });
 
     //var contentStringII = '<div class="content"><h1>That 1 Guy @ The Haunt in Ithaca, NY</h1></div>' +
