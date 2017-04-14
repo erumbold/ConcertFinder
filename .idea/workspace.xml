@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67d49459-8657-4392-93c2-63ce2a66c2a8" name="Default" comment="update Javadoc comments again">
+    <list default="true" id="67d49459-8657-4392-93c2-63ce2a66c2a8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/Database.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/Database.java" />
     </list>
@@ -32,9 +32,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#1161#1162#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,41 +58,41 @@
       <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32357472">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9556213">
+              <caret line="888" column="65" selection-start-line="888" selection-start-column="65" selection-end-line="888" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1492099204000" expanded="true" signature="815:1045" placeholder="CREATE TABLE... IF" />
-                <marker date="1492099204000" expanded="true" signature="1098:1404" placeholder="CREATE TABLE... IF" />
-                <marker date="1492099204000" expanded="true" signature="1457:1658" placeholder="CREATE TABLE... IF" />
-                <marker date="1492099204000" expanded="true" signature="1711:2048" placeholder="CREATE TABLE... IF" />
-                <marker date="1492099204000" expanded="true" signature="2101:2264" placeholder="CREATE TABLE... IF" />
-                <marker date="1492099204000" expanded="true" signature="2705:2719" placeholder="SELECT * FRO... missingValue" />
-                <marker date="1492099204000" expanded="true" signature="4657:4721" placeholder="UPDATE USER " />
-                <marker date="1492099204000" expanded="true" signature="5400:5432" placeholder="DELETE FROM " />
-                <marker date="1492099204000" expanded="true" signature="6228:6263" placeholder="SELECT * FRO... USER" />
-                <marker date="1492099204000" expanded="true" signature="6887:6919" placeholder="SELECT * FRO... USER" />
-                <marker date="1492099204000" expanded="true" signature="7522:7551" placeholder="SELECT * FRO... USER" />
-                <marker date="1492099204000" expanded="true" signature="8157:8222" placeholder="SELECT USER_... USER_TO_EVENT" />
-                <marker date="1492099204000" expanded="true" signature="8872:8907" placeholder="SELECT * FRO... USER" />
-                <marker date="1492099204000" expanded="true" signature="9455:9493" placeholder="SELECT * FRO... USER" />
-                <marker date="1492099204000" expanded="true" signature="11381:11486" placeholder="UPDATE USERD... " />
-                <marker date="1492099204000" expanded="true" signature="12199:12236" placeholder="DELETE FROM " />
-                <marker date="1492099204000" expanded="true" signature="14748:14889" placeholder="UPDATE MUSIC... " />
-                <marker date="1492099204000" expanded="true" signature="15723:15764" placeholder="DELETE FROM " />
-                <marker date="1492099204000" expanded="true" signature="19223:19407" placeholder="UPDATE EVENT... " />
-                <marker date="1492099204000" expanded="true" signature="19223:19418" placeholder="UPDATE EVENT... " />
-                <marker date="1492099204000" expanded="true" signature="20474:20504" placeholder="DELETE FROM " />
-                <marker date="1492099204000" expanded="true" signature="21264:21308" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="22058:22092" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="22726:22774" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="23513:23575" placeholder="SELECT EVENT... USER_TO_EVENT" />
-                <marker date="1492099204000" expanded="true" signature="23818:23848" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="24712:24779" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="25442:25474" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="26133:26164" placeholder="SELECT * FRO... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="26674:26707" placeholder="SELECT ID FR... EVENT" />
-                <marker date="1492099204000" expanded="true" signature="31567:31749" placeholder="SELECT TITLE... " />
+                <marker date="1492182926000" expanded="true" signature="1036:1266" placeholder="CREATE TABLE... IF" />
+                <marker date="1492182926000" expanded="true" signature="1319:1625" placeholder="CREATE TABLE... IF" />
+                <marker date="1492182926000" expanded="true" signature="1678:1879" placeholder="CREATE TABLE... IF" />
+                <marker date="1492182926000" expanded="true" signature="1932:2269" placeholder="CREATE TABLE... IF" />
+                <marker date="1492182926000" expanded="true" signature="2322:2485" placeholder="CREATE TABLE... IF" />
+                <marker date="1492182926000" expanded="true" signature="3017:3031" placeholder="SELECT * FRO... missingValue" />
+                <marker date="1492182926000" expanded="true" signature="5119:5183" placeholder="UPDATE USER " />
+                <marker date="1492182926000" expanded="true" signature="5981:6013" placeholder="DELETE FROM " />
+                <marker date="1492182926000" expanded="true" signature="6908:6943" placeholder="SELECT * FRO... USER" />
+                <marker date="1492182926000" expanded="true" signature="7676:7708" placeholder="SELECT * FRO... USER" />
+                <marker date="1492182926000" expanded="true" signature="8417:8446" placeholder="SELECT * FRO... USER" />
+                <marker date="1492182926000" expanded="true" signature="9155:9220" placeholder="SELECT USER_... USER_TO_EVENT" />
+                <marker date="1492182926000" expanded="true" signature="9980:10015" placeholder="SELECT * FRO... USER" />
+                <marker date="1492182926000" expanded="true" signature="10662:10700" placeholder="SELECT * FRO... USER" />
+                <marker date="1492182926000" expanded="true" signature="12843:12948" placeholder="UPDATE USERD... " />
+                <marker date="1492182926000" expanded="true" signature="13790:13827" placeholder="DELETE FROM " />
+                <marker date="1492182926000" expanded="true" signature="16629:16770" placeholder="UPDATE MUSIC... " />
+                <marker date="1492182926000" expanded="true" signature="17745:17786" placeholder="DELETE FROM " />
+                <marker date="1492182926000" expanded="true" signature="21497:21681" placeholder="UPDATE EVENT... " />
+                <marker date="1492182926000" expanded="true" signature="21497:21692" placeholder="UPDATE EVENT... " />
+                <marker date="1492182926000" expanded="true" signature="22857:22887" placeholder="DELETE FROM " />
+                <marker date="1492182926000" expanded="true" signature="23742:23786" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="24684:24718" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="25462:25510" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="26356:26418" placeholder="SELECT EVENT... USER_TO_EVENT" />
+                <marker date="1492182926000" expanded="true" signature="26661:26691" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="27661:27728" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="28497:28529" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="29295:29326" placeholder="SELECT * FRO... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="29942:29975" placeholder="SELECT ID FR... EVENT" />
+                <marker date="1492182926000" expanded="true" signature="35577:35759" placeholder="SELECT TITLE... " />
               </folding>
             </state>
           </provider>
@@ -105,7 +103,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,9 +126,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="Class" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -174,6 +174,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Controller/EventManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/Driver/MainRoute.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/Logger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Controller/CFLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/Database.java" />
       </list>
     </option>
@@ -232,52 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ConcertFinder">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ConcertFinder">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/main/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="ConcertFinder">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT=".idea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -502,6 +459,51 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ConcertFinder">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ConcertFinder">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/main/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="ConcertFinder">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT=".idea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -711,6 +713,65 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="myFilePath" />
@@ -826,12 +887,74 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ConcertFinder" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -840,6 +963,36 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -876,6 +1029,34 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -885,10 +1066,31 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <list size="5">
@@ -947,7 +1149,9 @@
       <workItem from="1491485737468" duration="908000" />
       <workItem from="1491496992342" duration="67000" />
       <workItem from="1492090265566" duration="2094000" />
-      <workItem from="1492098735819" duration="418000" />
+      <workItem from="1492098735819" duration="600000" />
+      <workItem from="1492147097423" duration="208000" />
+      <workItem from="1492176132917" duration="4205000" />
     </task>
     <task id="LOCAL-00001" summary="Add git ignore and logger">
       <created>1490142360729</created>
@@ -997,11 +1201,17 @@
       <option name="project" value="LOCAL" />
       <updated>1492091133946</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed modify methods in Database">
+      <created>1492099243692</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1492099243692</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32057000" />
+    <option name="totallyTimeSpent" value="36652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,7 +1234,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34517047" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49499285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1093,11 +1303,12 @@
     <MESSAGE value="Reorg files, add bootstrap and template" />
     <MESSAGE value="temp fixed" />
     <MESSAGE value="update Javadoc comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Javadoc comments" />
+    <MESSAGE value="fixed modify methods in Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed modify methods in Database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1106,14 +1317,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Driver/MainRoute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Driver/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1125,7 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,37 +1344,37 @@
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1492099204000" expanded="true" signature="815:1045" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="1098:1404" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="1457:1658" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="1711:2048" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="2101:2264" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="2705:2719" placeholder="SELECT * FRO... missingValue" />
-            <marker date="1492099204000" expanded="true" signature="4657:4721" placeholder="UPDATE USER " />
-            <marker date="1492099204000" expanded="true" signature="5400:5432" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="6228:6263" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="6887:6919" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="7522:7551" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="8157:8222" placeholder="SELECT USER_... USER_TO_EVENT" />
-            <marker date="1492099204000" expanded="true" signature="8872:8907" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="9455:9493" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="11381:11486" placeholder="UPDATE USERD... " />
-            <marker date="1492099204000" expanded="true" signature="12199:12236" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="14748:14889" placeholder="UPDATE MUSIC... " />
-            <marker date="1492099204000" expanded="true" signature="15723:15764" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="19223:19407" placeholder="UPDATE EVENT... " />
-            <marker date="1492099204000" expanded="true" signature="19223:19418" placeholder="UPDATE EVENT... " />
-            <marker date="1492099204000" expanded="true" signature="20474:20504" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="21264:21308" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="22058:22092" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="22726:22774" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="23513:23575" placeholder="SELECT EVENT... USER_TO_EVENT" />
-            <marker date="1492099204000" expanded="true" signature="23818:23848" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="24712:24779" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="25442:25474" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="26133:26164" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="26674:26707" placeholder="SELECT ID FR... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="31567:31749" placeholder="SELECT TITLE... " />
+            <marker date="1492182926000" expanded="true" signature="1036:1266" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="1319:1625" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="1678:1879" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="1932:2269" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="2322:2485" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="3017:3031" placeholder="SELECT * FRO... missingValue" />
+            <marker date="1492182926000" expanded="true" signature="5119:5183" placeholder="UPDATE USER " />
+            <marker date="1492182926000" expanded="true" signature="5981:6013" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="6908:6943" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="7676:7708" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="8417:8446" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="9155:9220" placeholder="SELECT USER_... USER_TO_EVENT" />
+            <marker date="1492182926000" expanded="true" signature="9980:10015" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="10662:10700" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="12843:12948" placeholder="UPDATE USERD... " />
+            <marker date="1492182926000" expanded="true" signature="13790:13827" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="16629:16770" placeholder="UPDATE MUSIC... " />
+            <marker date="1492182926000" expanded="true" signature="17745:17786" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="21497:21681" placeholder="UPDATE EVENT... " />
+            <marker date="1492182926000" expanded="true" signature="21497:21692" placeholder="UPDATE EVENT... " />
+            <marker date="1492182926000" expanded="true" signature="22857:22887" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="23742:23786" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="24684:24718" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="25462:25510" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="26356:26418" placeholder="SELECT EVENT... USER_TO_EVENT" />
+            <marker date="1492182926000" expanded="true" signature="26661:26691" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="27661:27728" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="28497:28529" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="29295:29326" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="29942:29975" placeholder="SELECT ID FR... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="35577:35759" placeholder="SELECT TITLE... " />
           </folding>
         </state>
       </provider>
@@ -1223,7 +1425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,7 +1439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,7 +1453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1459,7 +1658,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1482,9 +1683,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#1161#1162#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1508,47 +1707,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.506135">
           <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32357472">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9556213">
+          <caret line="888" column="65" selection-start-line="888" selection-start-column="65" selection-end-line="888" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1492099204000" expanded="true" signature="815:1045" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="1098:1404" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="1457:1658" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="1711:2048" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="2101:2264" placeholder="CREATE TABLE... IF" />
-            <marker date="1492099204000" expanded="true" signature="2705:2719" placeholder="SELECT * FRO... missingValue" />
-            <marker date="1492099204000" expanded="true" signature="4657:4721" placeholder="UPDATE USER " />
-            <marker date="1492099204000" expanded="true" signature="5400:5432" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="6228:6263" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="6887:6919" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="7522:7551" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="8157:8222" placeholder="SELECT USER_... USER_TO_EVENT" />
-            <marker date="1492099204000" expanded="true" signature="8872:8907" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="9455:9493" placeholder="SELECT * FRO... USER" />
-            <marker date="1492099204000" expanded="true" signature="11381:11486" placeholder="UPDATE USERD... " />
-            <marker date="1492099204000" expanded="true" signature="12199:12236" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="14748:14889" placeholder="UPDATE MUSIC... " />
-            <marker date="1492099204000" expanded="true" signature="15723:15764" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="19223:19407" placeholder="UPDATE EVENT... " />
-            <marker date="1492099204000" expanded="true" signature="19223:19418" placeholder="UPDATE EVENT... " />
-            <marker date="1492099204000" expanded="true" signature="20474:20504" placeholder="DELETE FROM " />
-            <marker date="1492099204000" expanded="true" signature="21264:21308" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="22058:22092" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="22726:22774" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="23513:23575" placeholder="SELECT EVENT... USER_TO_EVENT" />
-            <marker date="1492099204000" expanded="true" signature="23818:23848" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="24712:24779" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="25442:25474" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="26133:26164" placeholder="SELECT * FRO... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="26674:26707" placeholder="SELECT ID FR... EVENT" />
-            <marker date="1492099204000" expanded="true" signature="31567:31749" placeholder="SELECT TITLE... " />
+            <marker date="1492182926000" expanded="true" signature="1036:1266" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="1319:1625" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="1678:1879" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="1932:2269" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="2322:2485" placeholder="CREATE TABLE... IF" />
+            <marker date="1492182926000" expanded="true" signature="3017:3031" placeholder="SELECT * FRO... missingValue" />
+            <marker date="1492182926000" expanded="true" signature="5119:5183" placeholder="UPDATE USER " />
+            <marker date="1492182926000" expanded="true" signature="5981:6013" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="6908:6943" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="7676:7708" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="8417:8446" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="9155:9220" placeholder="SELECT USER_... USER_TO_EVENT" />
+            <marker date="1492182926000" expanded="true" signature="9980:10015" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="10662:10700" placeholder="SELECT * FRO... USER" />
+            <marker date="1492182926000" expanded="true" signature="12843:12948" placeholder="UPDATE USERD... " />
+            <marker date="1492182926000" expanded="true" signature="13790:13827" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="16629:16770" placeholder="UPDATE MUSIC... " />
+            <marker date="1492182926000" expanded="true" signature="17745:17786" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="21497:21681" placeholder="UPDATE EVENT... " />
+            <marker date="1492182926000" expanded="true" signature="21497:21692" placeholder="UPDATE EVENT... " />
+            <marker date="1492182926000" expanded="true" signature="22857:22887" placeholder="DELETE FROM " />
+            <marker date="1492182926000" expanded="true" signature="23742:23786" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="24684:24718" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="25462:25510" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="26356:26418" placeholder="SELECT EVENT... USER_TO_EVENT" />
+            <marker date="1492182926000" expanded="true" signature="26661:26691" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="27661:27728" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="28497:28529" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="29295:29326" placeholder="SELECT * FRO... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="29942:29975" placeholder="SELECT ID FR... EVENT" />
+            <marker date="1492182926000" expanded="true" signature="35577:35759" placeholder="SELECT TITLE... " />
           </folding>
         </state>
       </provider>

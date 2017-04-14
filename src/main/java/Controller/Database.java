@@ -2,8 +2,14 @@ package Controller;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-//TODO FIX MODIFY METHODS
+
+
+// TODO FIX MODIFY METHODS
+// TODO WRITE SELECT FOR EXTENDED INFO
+// TODO MAKE EVERYTHING VOID
 
 /**
  * This class consists of a database constructor and all methods to interact with information stored in the database.
@@ -12,6 +18,7 @@ import java.util.ArrayList;
 public class Database {
     private Connection c = null;
     private Statement st = null;
+    private final static Logger LOGGER = Logger.getLogger(Database.class.getName());
 
     /**
      * This constructor opens a connection to the database and creates the tables (EVENT, USER, USERDETAIL,
@@ -47,8 +54,10 @@ public class Database {
                     "USER_ID INT NOT NULL, EVENT_ID INT NOT NULL, IS_OWNER INT NOT NULL);";
             st.execute(sql);
 
+            LOGGER.log(Level.FINE, "database accessed");
+
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.WARNING, "not connected to database");
         }
     }
 
@@ -67,7 +76,7 @@ public class Database {
             }
             rs.close();
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "number of rows not calculated");
         }
         return count;
     }
@@ -94,11 +103,12 @@ public class Database {
             st.setInt(6, isMusician);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "User {0} added to database", username);
             return username;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User {0} could not be added", username);
         }
-        return "no";
+        return "";
     }
 
     /**
@@ -117,11 +127,12 @@ public class Database {
             st.setString(2, password);
             st.setString(3, email);
             st.setString(4, oldUsername);
+            LOGGER.log(Level.FINE, "User {0}'s info changed", oldUsername);
             return newUsername;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User {0}'s info NOT changed", oldUsername);
         }
-        return "no";
+        return "";
     }
 
     /**
@@ -141,11 +152,12 @@ public class Database {
             } else {
                 deleteMusicianDetail(Integer.parseInt(userInfo[0]));
             }
+            LOGGER.log(Level.FINE, "User {0} deleted", username);
             return username;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User {0} NOT deleted", username);
         }
-        return "no";
+        return "";
     }
 
     /**
@@ -160,8 +172,9 @@ public class Database {
             st.setString(1, username);
             ResultSet rs = st.executeQuery();
             results = getUserResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find user by username");
         }
         return results.get(0);
     }
@@ -178,8 +191,9 @@ public class Database {
             st.setString(1, email);
             ResultSet rs = st.executeQuery();
             results = getUserResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find user by email");
         }
         return results.get(0);
     }
@@ -196,8 +210,9 @@ public class Database {
             st.setInt(1, id);
             ResultSet rs = st.executeQuery();
             results = getUserResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find user by ID");
         }
         return results.get(0);
     }
@@ -216,8 +231,9 @@ public class Database {
             ResultSet rs = st.executeQuery();
             int ownerID = rs.getInt("USER_ID");
             owner = selectUserByID(ownerID)[1];
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find musician by event");
         }
         return owner;
     }
@@ -232,8 +248,9 @@ public class Database {
             PreparedStatement st = c.prepareStatement("SELECT * FROM USER WHERE IS_ADMIN=1");
             ResultSet rs = st.executeQuery();
             results = getUserResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find Admins");
         }
         return results;
     }
@@ -248,8 +265,9 @@ public class Database {
             PreparedStatement st = c.prepareStatement("SELECT * FROM USER WHERE IS_MUSICIAN=1");
             ResultSet rs = st.executeQuery();
             results = getUserResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find Musicians");
         }
         return results;
     }
@@ -276,9 +294,10 @@ public class Database {
             st.setString(6, state);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "Extended info for User {0} added to database", userID);
             return userID;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Extended info for User {0} NOT added to database", userID);
         }
         return 0;
     }
@@ -304,9 +323,10 @@ public class Database {
             st.setInt(5, userID);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "User {0}'s extended info changed", userID);
             return userID;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User {0}'s extended info NOT changed", userID);
         }
         return 0;
     }
@@ -322,9 +342,10 @@ public class Database {
             PreparedStatement st = c.prepareStatement("DELETE FROM USERDETAIL WHERE USER_ID="+userID);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "User {0}'s extended info deleted", userID);
             return userID;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User {0}'s extended info NOT deleted", userID);
         }
         return 0;
     }
@@ -358,9 +379,10 @@ public class Database {
             st.setString(9, soundcloud);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "Extended info for Musician {0} added to database", userID);
             return userID;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Extended info for Musician {0} NOT added to database", userID);
         }
         return 0;
     }
@@ -393,9 +415,10 @@ public class Database {
             st.setInt(8, userID);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "Extended info for Musician {0} changed", userID);
             return userID;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Extended info for Musician {0} NOT changed", userID);
         }
         return 0;
     }
@@ -411,9 +434,10 @@ public class Database {
             PreparedStatement st = c.prepareStatement("DELETE FROM MUSICIANDETAIL WHERE USER_ID="+userID);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "Musician {0}'s extended info deleted", userID);
             return userID;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Musician {0}'s extended info NOT deleted", userID);
         }
         return 0;
     }
@@ -463,11 +487,12 @@ public class Database {
             st.setDouble(15, latitude);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "Event {0} added to database", title);
             return title;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Event {0} NOT added to database", title);
         }
-        return "no";
+        return "";
     }
 
     /**
@@ -512,11 +537,12 @@ public class Database {
             st.setInt(15, id);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "Event {0}'s info changed", title);
             return title;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Event {0}'s info NOT changed", title);
         }
-        return "no";
+        return "";
     }
 
     /**
@@ -530,11 +556,12 @@ public class Database {
             PreparedStatement st = c.prepareStatement("DELETE FROM EVENT WHERE TITLE="+title);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "Event {0} deleted", title);
             return title;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Event {0} NOT deleted", title);
         }
-        return "no";
+        return "";
     }
 
     /**
@@ -552,8 +579,10 @@ public class Database {
             st.setString(2, state);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e) {
             System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event by city, state");
         }
         return results;
     }
@@ -570,8 +599,9 @@ public class Database {
             PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE ZIPCODE="+zip);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event by zip code");
         }
         return results;
     }
@@ -589,8 +619,9 @@ public class Database {
             ResultSet rs = st.executeQuery();
             ArrayList<String[]> results = getEventResults(rs);
             res = results.get(0);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event by title");
         }
         return res;
     }
@@ -615,8 +646,9 @@ public class Database {
                 ArrayList<String[]> oneEvent = getEventResults(rs);
                 events.add(oneEvent.get(0));
             }
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event by user");
         }
         return events;
     }
@@ -635,8 +667,9 @@ public class Database {
             PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE MONTH="+month+" AND DAY="+day+" AND YEAR="+year);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event by date");
         }
         return results;
     }
@@ -653,8 +686,9 @@ public class Database {
             PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE MONTH="+month);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event by month");
         }
         return results;
     }
@@ -671,8 +705,9 @@ public class Database {
             PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE YEAR="+year);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event by year");
         }
         return results;
     }
@@ -690,8 +725,9 @@ public class Database {
             ResultSet rs = st.executeQuery();
             ArrayList<String[]> res = getEventResults(rs);
             id = Integer.parseInt(res.get(0)[0]);
+            LOGGER.log(Level.FINE, "Search Successful");
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Unable to execute search: find event ID by title");
         }
         return id;
     }
@@ -714,9 +750,10 @@ public class Database {
             st.setInt(4, isOwner);
             st.executeUpdate();
             c.commit();
+            LOGGER.log(Level.FINE, "User {0} (owner: {1}) to Event {2} link added to database", new Object[]{userID, isOwner, eventID});
             return userID;
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User {0} to Event {1} link NOT added to database", new Object[]{userID, eventID});
         }
         return 0;
     }
@@ -750,8 +787,9 @@ public class Database {
                 results.add(toAdd);
             }
             rs.close();
+            LOGGER.log(Level.FINE, "Event retrieval successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "Event retrieval unsuccessful");
         }
         return results;
     }
@@ -775,8 +813,9 @@ public class Database {
                 results.add(toAdd);
             }
             rs.close();
+            LOGGER.log(Level.FINE, "User retrieval successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User retrievel unsuccessful");
         }
         return results;
     }
@@ -793,8 +832,9 @@ public class Database {
                 results.add(rs.getInt("USER_ID"));
             }
             rs.close();
+            LOGGER.log(Level.FINE, "User/Event retrieval successful");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "User/Event retrieval unsuccessful");
         }
         return results;
     }
@@ -805,8 +845,9 @@ public class Database {
     public void closeConnection(){
         try {
             c.close();
+            LOGGER.log(Level.FINE, "database connection closed successfully");
         } catch (Exception e){
-            System.out.println(e);
+            LOGGER.log(Level.INFO, "database connection NOT closed");
         }
     }
 
@@ -818,8 +859,7 @@ public class Database {
     public ArrayList<String[]> listResults()
     {
         ArrayList<String[]> results = new ArrayList<>();
-        try
-        {
+        try {
             PreparedStatement st = c.prepareStatement("SELECT TITLE, MONTH, DAY, YEAR, HOUR, " +
                     "MINUTE, DESCRIPTION, VENUE_NAME, ADDRESS, CITY, STATE, ZIPCODE, LONGITUDE, LATITUDE " +
                     "from EVENT");
@@ -842,10 +882,11 @@ public class Database {
                 toAdd[12] = rs.getDouble("LONGITUDE") + "";
                 toAdd[13] = rs.getDouble("LATITUDE") + "";
                 results.add(toAdd);
-            }rs.close();
-        }catch(Exception e)
-        {
-            System.out.println(e);
+            }
+            rs.close();
+            LOGGER.log(Level.FINE, "all events retrieved successfully");
+        } catch(Exception e) {
+            LOGGER.log(Level.INFO, "unable to retrieve all events");
         }
 
         return results;
