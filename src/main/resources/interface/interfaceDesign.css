@@ -1,7 +1,9 @@
 body{
     background: linear-gradient(to left, #6B517A 15%, #462758);
     color: #C5C5C5;
+    font-family: Impact, Charcoal, sans-serif;
 }
+
 
 .search{
     width: 130px;
