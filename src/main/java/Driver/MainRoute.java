@@ -34,6 +34,29 @@ public class MainRoute {
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
 
+        post("/", (request, response) -> {
+            ObjectMapper mapper = new ObjectMapper();
+            String first = request.body();
+            String second = first.substring(7, first.length());
+            String [] tmp = second.split("\\+");
+            String result = "";
+            if(tmp.length > 1)
+            {
+                for(int i = 0; i < tmp.length-1; i++)
+                {
+                    result += tmp[i] + " ";
+                }
+                result += tmp[tmp.length-1];
+            }else
+            {
+                result += tmp[0];
+            }
+            System.out.println(result);
+            response.status(204);
+            response.type("application/json");
+            return 1;
+        });
+
         get("/addEvent", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("templateName", "addEvent.ftl");
@@ -66,6 +89,18 @@ public class MainRoute {
             return 1;
         });
 
+        get("/search", (request, response) -> {
+            response.status(200);
+            Map<String, Object> viewObjects = new HashMap<String, Object>();
+            viewObjects.put("templateName", "showSearch.ftl");
+            return new ModelAndView(viewObjects, "main.ftl");
+        }, new FreeMarkerEngine());
+
+        get("/getsearch", (request, response) -> {
+            response.status(200);
+            return toJSON(mod.sendEvents(1));
+        });
+
         get("/viewDB", (request, response) -> {
             response.status(200);
             Map<String, Object> viewObjects = new HashMap<String, Object>();
@@ -75,11 +110,11 @@ public class MainRoute {
 
         get("/getevents", (request, response) -> {
             response.status(200);
-            return toJSON(mod.sendEvents());
+            return toJSON(mod.sendEvents(0));
         });
         get("/getJson", (request, response) -> {
             response.status(200);
-            return mod.sendEvents();
+            return mod.sendEvents(0);
         });
 
         get("/map", (request, response) -> {
