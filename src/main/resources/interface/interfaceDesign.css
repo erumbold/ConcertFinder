@@ -3,14 +3,6 @@ body{
     color: #C5C5C5;
     font-family: Impact, Charcoal, sans-serif;
 }
-.timepicker {
-    background: #F9F9F9;
-    padding: 0;
-    margin: 0;
-    font: 14px/1.6 "Lucida Grande", "Helvetica", sans-serif;
-    color: #333;
-
-}
 
 .search{
     width: 130px;
@@ -32,7 +24,7 @@ body{
 }
 /* The side navigation menu */
 .sidenav {
-    height: 20%; /* 100% Full-height */
+    height: 50%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
