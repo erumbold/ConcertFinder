@@ -52,6 +52,9 @@ public class MainRoute {
                 result += tmp[0];
             }
             System.out.println(result);
+            String[] eventList = mod.em.selectEventByTitle(result);
+            mod.em.clearQuery();
+            mod.em.createQuery(eventList);
             response.status(204);
             response.type("application/json");
             return 1;
@@ -96,9 +99,40 @@ public class MainRoute {
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
 
+        post("/search", (request, response) -> {
+            ObjectMapper mapper = new ObjectMapper();
+            String first = request.body();
+            String second = first.substring(7, first.length());
+            String [] tmp = second.split("\\+");
+            String result = "";
+            if(tmp.length > 1)
+            {
+                for(int i = 0; i < tmp.length-1; i++)
+                {
+                    result += tmp[i] + " ";
+                }
+                result += tmp[tmp.length-1];
+            }else
+            {
+                result += tmp[0];
+            }
+            System.out.println(result);
+            String[] eventList = mod.em.selectEventByTitle(result);
+            mod.em.clearQuery();
+            mod.em.createQuery(eventList);
+            response.status(204);
+            response.type("application/json");
+            return 1;
+        });
+
         get("/getsearch", (request, response) -> {
             response.status(200);
-            return toJSON(mod.sendEvents(1));
+            String[] tmp = mod.em.getQuery();
+            if(tmp[0] != null)
+            {
+                return toJSON(mod.sendEvents(mod.em.getQuery()));
+            }
+            return toJSON(mod.sendEvents());
         });
 
         get("/viewDB", (request, response) -> {
@@ -110,11 +144,11 @@ public class MainRoute {
 
         get("/getevents", (request, response) -> {
             response.status(200);
-            return toJSON(mod.sendEvents(0));
+            return toJSON(mod.sendEvents());
         });
         get("/getJson", (request, response) -> {
             response.status(200);
-            return mod.sendEvents(0);
+            return mod.sendEvents();
         });
 
         get("/map", (request, response) -> {
@@ -123,6 +157,32 @@ public class MainRoute {
             viewObjects.put("templateName", "mapview.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
+
+        post("/map", (request, response) -> {
+            ObjectMapper mapper = new ObjectMapper();
+            String first = request.body();
+            String second = first.substring(7, first.length());
+            String [] tmp = second.split("\\+");
+            String result = "";
+            if(tmp.length > 1)
+            {
+                for(int i = 0; i < tmp.length-1; i++)
+                {
+                    result += tmp[i] + " ";
+                }
+                result += tmp[tmp.length-1];
+            }else
+            {
+                result += tmp[0];
+            }
+            System.out.println(result);
+            String[] eventList = mod.em.selectEventByTitle(result);
+            mod.em.clearQuery();
+            mod.em.createQuery(eventList);
+            response.status(204);
+            response.type("application/json");
+            return 1;
+        });
 
     }
 
