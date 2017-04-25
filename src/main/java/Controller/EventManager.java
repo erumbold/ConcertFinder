@@ -25,6 +25,12 @@ public class EventManager {
         return ret;
     }
 
+    public String[] selectEventByTitle(String title)
+    {
+        String[] tmp = db.selectEventByTitle(title);
+        return tmp;
+    }
+
 public static void main(String[] args) {
         Database db = new Database();
         String result = db.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
