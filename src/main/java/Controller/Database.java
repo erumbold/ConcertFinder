@@ -6,10 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-
-// TODO FIX MODIFY METHODS
 // TODO WRITE SELECT FOR EXTENDED INFO
-// TODO MAKE EVERYTHING VOID
 
 /**
  * This class consists of a database constructor and all methods to interact with information stored in the database.
@@ -88,10 +85,9 @@ public class Database {
      * @param email associated email
      * @param isAdmin Admin status
      * @param isMusician Musician status
-     * @return String username
      * @post new row in USER table in connected database
      */
-    public String insertUser(String username, String password, String email, int isAdmin, int isMusician){
+    public void insertUser(String username, String password, String email, int isAdmin, int isMusician){
         try {
             PreparedStatement st = c.prepareStatement("INSERT OR IGNORE INTO USER (ID, USERNAME, PASSWORD, EMAIL, " +
                     "IS_ADMIN, IS_MUSICIAN) VALUES (?,?,?,?,?,?)");
@@ -104,11 +100,9 @@ public class Database {
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "User {0} added to database", username);
-            return username;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "User {0} could not be added", username);
         }
-        return "";
     }
 
     /**
@@ -117,10 +111,9 @@ public class Database {
      * @param password new password
      * @param email new email
      * @param oldUsername username to change
-     * @return String username
      * @post values for given row in USER table of connected database are changed
      */
-    public String modifyUser(String newUsername, String password, String email, String oldUsername){
+    public void modifyUser(String newUsername, String password, String email, String oldUsername){
         try {
             PreparedStatement st = c.prepareStatement("UPDATE USER SET USERNAME=?, PASSWORD=?, EMAIL=? WHERE USERNAME=?");
             st.setString(1, newUsername);
@@ -128,23 +121,21 @@ public class Database {
             st.setString(3, email);
             st.setString(4, oldUsername);
             LOGGER.log(Level.FINE, "User {0}'s info changed", oldUsername);
-            return newUsername;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "User {0}'s info NOT changed", oldUsername);
         }
-        return "";
     }
 
     /**
      * removes a username from the database
      * @param username name of user to remove
-     * @return String username
      * @post row removed from USER table in connected database
      */
-    public String deleteUser(String username){
+    public void deleteUser(String username){
         try {
             String[] userInfo = selectUserByUsername(username);
-            PreparedStatement st = c.prepareStatement("DELETE FROM USER WHERE USERNAME="+username);
+            PreparedStatement st = c.prepareStatement("DELETE FROM USER WHERE USERNAME=?");
+            st.setString(1, username);
             st.executeUpdate();
             c.commit();
             if (userInfo[5].equals("0")) {
@@ -153,11 +144,9 @@ public class Database {
                 deleteMusicianDetail(Integer.parseInt(userInfo[0]));
             }
             LOGGER.log(Level.FINE, "User {0} deleted", username);
-            return username;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "User {0} NOT deleted", username);
         }
-        return "";
     }
 
     /**
@@ -279,10 +268,9 @@ public class Database {
      * @param lastName user's last name
      * @param city user's home city
      * @param state user's home state
-     * @return int the associated userID
      * @post new row in USERDETAIL table of connected database
      */
-    public int insertUserDetail(int userID, String firstName, String lastName, String city, String state){
+    public void insertUserDetail(int userID, String firstName, String lastName, String city, String state){
         try {
             PreparedStatement st = c.prepareStatement("INSERT OR IGNORE INTO USERDETAIL (ID, USER_ID, FIRST_NAME, " +
                     "LAST_NAME, CITY, STATE) VALUES (?,?,?,?,?,?)");
@@ -295,11 +283,9 @@ public class Database {
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "Extended info for User {0} added to database", userID);
-            return userID;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "Extended info for User {0} NOT added to database", userID);
         }
-        return 0;
     }
 
     /**
@@ -309,10 +295,9 @@ public class Database {
      * @param lastName new last name
      * @param city new home city
      * @param state new home state
-     * @return the associated userID
      * @post values in USERDETAIL table of connected database are changed
      */
-    public int modifyUserDetail(int userID, String firstName, String lastName, String city, String state){
+    public void modifyUserDetail(int userID, String firstName, String lastName, String city, String state){
         try {
             PreparedStatement st = c.prepareStatement("UPDATE USERDETAIL SET FIRST_NAME=?, LAST_NAME=?, " +
                     "CITY=?, STATE=? WHERE USER_ID=?");
@@ -324,30 +309,26 @@ public class Database {
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "User {0}'s extended info changed", userID);
-            return userID;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "User {0}'s extended info NOT changed", userID);
         }
-        return 0;
     }
 
     /**
      * removes a user's extended information from the database
      * @param userID ID of user to delete
-     * @return the associated userID
      * @post row removed from USERDETAIL table of connected database
      */
-    public int deleteUserDetail(int userID){
+    public void deleteUserDetail(int userID){
         try {
-            PreparedStatement st = c.prepareStatement("DELETE FROM USERDETAIL WHERE USER_ID="+userID);
+            PreparedStatement st = c.prepareStatement("DELETE FROM USERDETAIL WHERE USER_ID=?");
+            st.setInt(1, userID);
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "User {0}'s extended info deleted", userID);
-            return userID;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "User {0}'s extended info NOT deleted", userID);
         }
-        return 0;
     }
 
     /**
@@ -360,11 +341,10 @@ public class Database {
      * @param twitter musician's twitter url
      * @param facebook musician's facebook url
      * @param soundcloud musician's soundcloud url
-     * @return int userID
      * @post new row in MUSICIANDETAIL table of connected database
      */
-    public int insertMusicianDetail(int userID, String name, String description, String city, String state,
-                                    String twitter, String facebook, String soundcloud){
+    public void insertMusicianDetail(int userID, String name, String description, String city, String state,
+                                     String twitter, String facebook, String soundcloud){
         try {
             PreparedStatement st = c.prepareStatement("INSERT OR IGNORE INTO MUSICIANDETAIL (ID, USER_ID, NAME, " +
                     "DESCRIPTION, CITY, STATE, TWITTER, FACEBOOK, SOUNDCLOUD) VALUES (?,?,?,?,?,?,?,?,?)");
@@ -380,11 +360,9 @@ public class Database {
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "Extended info for Musician {0} added to database", userID);
-            return userID;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "Extended info for Musician {0} NOT added to database", userID);
         }
-        return 0;
     }
 
     /**
@@ -397,11 +375,10 @@ public class Database {
      * @param twitter new twitter url
      * @param facebook new facebook url
      * @param soundcloud new soundcloud url
-     * @return int userID
      * @post values for given row in MUSICIANDETAIL table of connected database are changed
      */
-    public int modifyMusicianDetail(int userID, String name, String description, String city, String state,
-                                    String twitter, String facebook, String soundcloud){
+    public void modifyMusicianDetail(int userID, String name, String description, String city, String state,
+                                     String twitter, String facebook, String soundcloud){
         try {
             PreparedStatement st = c.prepareStatement("UPDATE MUSICANDETAIL SET NAME=?, DESCRIPTION=?, " +
                     "CITY=?, STATE=?, TWITTER=?, FACEBOOK=?, SOUNDCLOUD=? WHERE USER_ID=?");
@@ -416,30 +393,26 @@ public class Database {
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "Extended info for Musician {0} changed", userID);
-            return userID;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "Extended info for Musician {0} NOT changed", userID);
         }
-        return 0;
     }
 
     /**
      * removes a musician's extended information from the database
      * @param userID ID of user to be deleted
-     * @return int userID
      * @post row removed from MUSICIANDETAIL table in connected database
      */
-    public int deleteMusicianDetail(int userID){
+    public void deleteMusicianDetail(int userID){
         try {
-            PreparedStatement st = c.prepareStatement("DELETE FROM MUSICIANDETAIL WHERE USER_ID="+userID);
+            PreparedStatement st = c.prepareStatement("DELETE FROM MUSICIANDETAIL WHERE USER_ID=?");
+            st.setInt(1, userID);
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "Musician {0}'s extended info deleted", userID);
-            return userID;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "Musician {0}'s extended info NOT deleted", userID);
         }
-        return 0;
     }
 
     /**
@@ -458,17 +431,16 @@ public class Database {
      * @param zipCode venue's zip code
      * @param longitude venue's longitude coordinate
      * @param latitude venue's latitude coordinate
-     * @return String title
      * @post new row in EVENT table of connected database
      */
-    public String insertEvent(String title, int month, int day, int year, int hour, int minute,
-                              String description, String venueName, String address, String city,
-                              String state, String zipCode, double longitude, double latitude){
+    public void insertEvent(String title, int month, int day, int year, int hour, int minute,
+                            String description, String venueName, String address, String city,
+                            String state, String zipCode, double longitude, double latitude){
 
         try {
 
             PreparedStatement st = c.prepareStatement("INSERT OR IGNORE INTO EVENT (ID, TITLE, MONTH, DAY, YEAR, HOUR, " +
-                    "MINUTE, DESCRIPTION, VENUE_NAME, ADDRESS, CITY, STATE, ZIPCODE, LONGITUDE, LATITUDE) " +
+                    "MINUTE, DESCRIPTION, VENUE_NAME, ADDRESS, CITY, STATE, ZIPCODE, LATITUDE, LONGITUDE) " +
                     "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             st.setInt(1, getNumRows("EVENT")+1);
             st.setString(2, title);
@@ -483,16 +455,14 @@ public class Database {
             st.setString(11, city);
             st.setString(12, state);
             st.setString(13, zipCode);
-            st.setDouble(14, longitude);
-            st.setDouble(15, latitude);
+            st.setDouble(14, latitude);
+            st.setDouble(15, longitude);
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "Event {0} added to database", title);
-            return title;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "Event {0} NOT added to database", title);
         }
-        return "";
     }
 
     /**
@@ -511,15 +481,14 @@ public class Database {
      * @param zipCode updated venue's zip code
      * @param longitude updated venue's longitude coordinate
      * @param latitude updated venue's latitude coordinate
-     * @return String title
      * @post values for given row of EVENT table are changed
      */
-    public String modifyEvent(int id, String title, int month, int day, int year, int hour, int minute,
-                              String description, String venueName, String address, String city,
-                              String state, String zipCode, double longitude, double latitude){
+    public void modifyEvent(int id, String title, int month, int day, int year, int hour, int minute,
+                            String description, String venueName, String address, String city,
+                            String state, String zipCode, double longitude, double latitude){
         try {
             PreparedStatement st = c.prepareStatement("UPDATE EVENT SET TITLE=?, MONTH=?, DAY=?, YEAR=?, HOUR=?, " +
-                    "MINUTE=?, DESCRIPTION=?, VENUE_NAME=?, ADDRESS=?, CITY=?, STATE=?, ZIPCODE=?, LONGITUDE=?, LATITUDE=? WHERE ID=?");
+                    "MINUTE=?, DESCRIPTION=?, VENUE_NAME=?, ADDRESS=?, CITY=?, STATE=?, ZIPCODE=?, LATITUDE=?, LONGITUDE=? WHERE ID=?");
             st.setString(1, title);
             st.setInt(2, month);
             st.setInt(3, day);
@@ -532,36 +501,32 @@ public class Database {
             st.setString(10, city);
             st.setString(11, state);
             st.setString(12, zipCode);
-            st.setDouble(13, longitude);
-            st.setDouble(14, latitude);
+            st.setDouble(13, latitude);
+            st.setDouble(14, longitude);
             st.setInt(15, id);
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "Event {0}'s info changed", title);
-            return title;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "Event {0}'s info NOT changed", title);
         }
-        return "";
     }
 
     /**
      * removes a given event from the database
      * @param title title of event to delete
-     * @return title of deleted event
      * @post row removed from EVENT table of connected database
      */
-    public String deleteEvent(String title){
+    public void deleteEvent(String title){
         try {
-            PreparedStatement st = c.prepareStatement("DELETE FROM EVENT WHERE TITLE="+title);
+            PreparedStatement st = c.prepareStatement("DELETE FROM EVENT WHERE TITLE=?");
+            st.setString(1, title);
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "Event {0} deleted", title);
-            return title;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "Event {0} NOT deleted", title);
         }
-        return "";
     }
 
     /**
@@ -596,7 +561,8 @@ public class Database {
     public ArrayList<String[]> selectEventByZipCode(String zip){
         ArrayList<String[]> results = new ArrayList<>();
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE ZIPCODE="+zip);
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE ZIPCODE=?");
+            st.setString(1, zip);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
             LOGGER.log(Level.FINE, "Search Successful");
@@ -665,7 +631,10 @@ public class Database {
     public ArrayList<String[]> selectEventByDate(int month, int day, int year){
         ArrayList<String[]> results = new ArrayList<>();
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE MONTH="+month+" AND DAY="+day+" AND YEAR="+year);
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE MONTH=? AND DAY=? AND YEAR=?");
+            st.setInt(1, month);
+            st.setInt(2, day);
+            st.setInt(3, year);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
             LOGGER.log(Level.FINE, "Search Successful");
@@ -684,7 +653,8 @@ public class Database {
     public ArrayList<String[]> selectEventByMonth(int month){
         ArrayList<String[]> results = new ArrayList<>();
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE MONTH="+month);
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE MONTH=?");
+            st.setInt(1, month);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
             LOGGER.log(Level.FINE, "Search Successful");
@@ -703,7 +673,8 @@ public class Database {
     public ArrayList<String[]> selectEventByYear(int year){
         ArrayList<String[]> results = new ArrayList<>();
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE YEAR="+year);
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE YEAR=?");
+            st.setInt(1, year);
             ResultSet rs = st.executeQuery();
             results = getEventResults(rs);
             LOGGER.log(Level.FINE, "Search Successful");
@@ -722,7 +693,8 @@ public class Database {
         Connection c = null;
         int id = 0;
         try {
-            PreparedStatement st = c.prepareStatement("SELECT ID FROM EVENT WHERE TITLE="+title);
+            PreparedStatement st = c.prepareStatement("SELECT ID FROM EVENT WHERE TITLE=?");
+            st.setString(1, title);
             ResultSet rs = st.executeQuery();
             ArrayList<String[]> res = getEventResults(rs);
             id = Integer.parseInt(res.get(0)[0]);
@@ -738,10 +710,9 @@ public class Database {
      * @param userID ID of user to connect
      * @param eventID ID of event to connect
      * @param isOwner status of given userID's ownership of the event
-     * @return int userID
      * @post new row in USER_TO_EVENT table of connected database
      */
-    public int insertUserToEvent(int userID, int eventID, int isOwner){
+    public void insertUserToEvent(int userID, int eventID, int isOwner){
         try {
             PreparedStatement st = c.prepareStatement("INSERT OR IGNORE INTO USER_TO_EVENT (ID, USER_ID, EVENT_ID, " +
                     "IS_OWNER) VALUES (?,?,?,?)");
@@ -752,11 +723,9 @@ public class Database {
             st.executeUpdate();
             c.commit();
             LOGGER.log(Level.FINE, "User {0} (owner: {1}) to Event {2} link added to database", new Object[]{userID, isOwner, eventID});
-            return userID;
         } catch (Exception e){
             LOGGER.log(Level.INFO, "User {0} to Event {1} link NOT added to database", new Object[]{userID, eventID});
         }
-        return 0;
     }
 
     /**
@@ -783,8 +752,8 @@ public class Database {
                 toAdd[10] = rs.getString("CITY");
                 toAdd[11] = rs.getString("STATE");
                 toAdd[12] = rs.getString("ZIPCODE");
-                toAdd[13] = rs.getDouble("LONGITUDE") + "";
-                toAdd[14] = rs.getDouble("LATITUDE") + "";
+                toAdd[13] = rs.getDouble("LATITUDE") + "";
+                toAdd[14] = rs.getDouble("LONGITUDE") + "";
                 results.add(toAdd);
             }
             rs.close();
@@ -841,18 +810,6 @@ public class Database {
     }
 
     /**
-     * closes the SQLite connection
-     */
-    public void closeConnection(){
-        try {
-            c.close();
-            LOGGER.log(Level.FINE, "database connection closed successfully");
-        } catch (Exception e){
-            LOGGER.log(Level.INFO, "database connection NOT closed");
-        }
-    }
-
-    /**
      * gets all rows in EVENT table of connected database
      * @return ArrayList of arrays[title, month, day, year, hour, minute, description, venue name, address, city, state,
      * zip code, longitude, latitude]
@@ -880,8 +837,8 @@ public class Database {
                 toAdd[9] = rs.getString("CITY");
                 toAdd[10] = rs.getString("STATE");
                 toAdd[11] = rs.getString("ZIPCODE");
-                toAdd[12] = rs.getDouble("LONGITUDE") + "";
-                toAdd[13] = rs.getDouble("LATITUDE") + "";
+                toAdd[12] = rs.getDouble("LATITUDE") + "";
+                toAdd[13] = rs.getDouble("LONGITUDE") + "";
                 results.add(toAdd);
             }
             rs.close();
@@ -891,5 +848,22 @@ public class Database {
         }
 
         return results;
+    }
+
+    /**
+     * closes the SQLite connection
+     */
+    public void closeConnection(){
+        try {
+            c.close();
+            LOGGER.log(Level.FINE, "database connection closed successfully");
+        } catch (Exception e){
+            LOGGER.log(Level.INFO, "database connection NOT closed");
+        }
+    }
+
+    public static void main(String[] args) {
+        Database db = new Database();
+        db.deleteEvent("Drake at Ithaca College");
     }
 }
