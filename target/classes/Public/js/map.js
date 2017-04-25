@@ -1,7 +1,6 @@
 var map;
 var init = true;
 var his = [];
-var searchURL = "0.0.0.0:4567/search";
 
 function initMap() { //this function will get call back from Google map API
     mapDiv = document.getElementById('map');
@@ -29,7 +28,7 @@ function initMap() { //this function will get call back from Google map API
         '<p>Steve Hackett</p>' +
         '<p><b>February 18, 2017</b><br>' +
         '<b>Saturday   8:00 PM</b></p> ' +
-        '<p><a href='+searchURL+'>'+
+        '<p><a href=/search>'+
         'State Theater of Ithaca</a><br>' +
         '105 State Street<br>' +
         'Ithaca, New York 14850</p>' +
