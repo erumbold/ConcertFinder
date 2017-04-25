@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="01b5c053-1c86-43f7-8332-8f1bf70828f4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css" afterPath="$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/logInPage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/logInPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/searchPage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/searchPage.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,24 +56,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewEventPage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewEventPage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+            <state relative-caret-position="3549">
+              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#628#635#1" expanded="true" />
+                <element signature="e#421#428#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateAccountpage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateAccountpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="238">
               <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -138,11 +134,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/interface/jquery-1.11.3.min.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css" />
         <option value="$PROJECT_DIR$/src/main/resources/interface/logInPage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/interface/searchPage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" />
       </list>
     </option>
   </component>
@@ -767,7 +763,7 @@
       <option name="presentableId" value="Default" />
       <updated>1492541579736</updated>
       <workItem from="1492541581295" duration="543000" />
-      <workItem from="1492542310411" duration="24124000" />
+      <workItem from="1492542310411" duration="24183000" />
     </task>
     <task id="LOCAL-00001" summary="interface stuff">
       <created>1492542360983</created>
@@ -804,11 +800,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492769081539</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="interface stuff">
+      <created>1493116612557</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493116612557</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24667000" />
+    <option name="totallyTimeSpent" value="24726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -975,26 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#628#635#1" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/interface/logInPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -1021,11 +1004,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="238">
           <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#426#433#1" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3549">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#421#428#1" expanded="true" />
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
