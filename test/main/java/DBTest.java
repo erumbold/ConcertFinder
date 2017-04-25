@@ -14,28 +14,28 @@ public class DBTest {
 
     @Test
     public void testUserInsert(){
-        String result = db.insertUser("erumbold", "asdfghjkl", "erumbold@ithaca.edu", 1, 0);
-        assertEquals("erumbold", result);
-        result = db.insertUser("hmargalotti", "qwertyuiop", "hmargalotti@ithaca.edu", 0, 1);
-        assertEquals("hmargalotti", result);
-        result = db.insertUser("clawrence", "123456", "clawrence@ithaca.edu", 0, 0);
-        assertEquals("clawrence", result);
+        db.insertUser("erumbold", "asdfghjkl", "erumbold@ithaca.edu", 1, 0);
+        assertEquals("erumbold", db.selectUserByUsername("erumbold")[0]);
+        db.insertUser("hmargalotti", "qwertyuiop", "hmargalotti@ithaca.edu", 0, 1);
+        assertEquals("hmargalotti", db.selectUserByUsername("hmargalotti")[0]);
+        db.insertUser("clawrence", "123456", "clawrence@ithaca.edu", 0, 0);
+        assertEquals("clawrence", db.selectUserByUsername("clawrence")[0]);
     }
 
     @Test
     public void testEventInsert(){
-        String result = db.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
+        db.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
                 "The Woodlands", "123 Place", "Dover", "DE", "19901", -.5, .5);
-        assertEquals("Firefly Music Festival", result);             // insert Firefly Music Festival
-        result = db.insertEvent("Pumpkin Chunkin'", 6, 18, 2017, 12, 0, "description", "Field", "Somewhere",
+        assertEquals("Firefly Music Festival", db.selectEventByTitle("Firefly Music Festival")[0]);             // insert Firefly Music Festival
+        db.insertEvent("Pumpkin Chunkin'", 6, 18, 2017, 12, 0, "description", "Field", "Somewhere",
                 "Dover", "DE", "19901", -.5, .5);
-        assertEquals("Pumpkin Chunkin'", result);                   // insert Pumpkin Chunkin'
-        result = db.insertEvent("Coachella",9,23,2017,12,0,"description", "Somewhere", "Out there", "Chicago", "IL",
+        assertEquals("Pumpkin Chunkin'", db.selectEventByTitle("Pumpkin Chunkin'")[0]);                   // insert Pumpkin Chunkin'
+        db.insertEvent("Coachella",9,23,2017,12,0,"description", "Somewhere", "Out there", "Chicago", "IL",
                 "12345", -.5, .5);
-        assertEquals("Coachella", result);                          // insert Coachella
-        result = db.insertEvent("Cayuga Sound", 9,23,2017, 12, 0, "description", ".", "Stewart Park", "Ithaca",
+        assertEquals("Coachella", db.selectEventByTitle("Coachella")[0]);                          // insert Coachella
+        db.insertEvent("Cayuga Sound", 9,23,2017, 12, 0, "description", ".", "Stewart Park", "Ithaca",
                 "NY", "14850", -.5, .5);
-        assertEquals("Cayuga Sound", result);                       // insert Cayuga sound
+        assertEquals("Cayuga Sound", db.selectEventByTitle("Cayuga Sound")[0]);                       // insert Cayuga sound
     }
 
     @Test
@@ -60,7 +60,7 @@ public class DBTest {
             assertArrayEquals(expectDelaware.get(i), result.get(i));
         }
 
-                            // select title Coachella
+        // select title Coachella
         String[] ret3 = {"Coachella", "9","23","2017","12","0","description", "Somewhere", "Out there", "Chicago", "IL",
                 "12345", "-0.5", "0.5"};
         String res[] = db.selectEventByTitle("Coachella");
