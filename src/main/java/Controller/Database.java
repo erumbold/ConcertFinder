@@ -581,7 +581,8 @@ public class Database {
     public String[] selectEventByTitle(String title){
         String res[] = new String[15];
         try {
-            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE TITLE LIKE %"+title+"%");
+            PreparedStatement st = c.prepareStatement("SELECT * FROM EVENT WHERE TITLE=?");
+            st.setString(1, title);
             ResultSet rs = st.executeQuery();
             ArrayList<String[]> results = getEventResults(rs);
             res = results.get(0);
