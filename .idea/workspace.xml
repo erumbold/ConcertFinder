@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="01b5c053-1c86-43f7-8332-8f1bf70828f4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css" afterPath="$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/logInPage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/logInPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/interface/searchPage.html" afterPath="$PROJECT_DIR$/src/main/resources/interface/searchPage.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +35,8 @@
       <file leaf-file-name="searchPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/interface/searchPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
-              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="343">
+              <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
               <folding>
                 <element signature="e#293#300#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -45,36 +49,39 @@
       <file leaf-file-name="logInPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/interface/logInPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="525">
+              <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
               <folding>
-                <element signature="e#287#294#1" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#415#422#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewEventPage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewEventPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2058">
-              <caret line="98" column="38" lean-forward="false" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
+            <state relative-caret-position="336">
+              <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
               <folding>
-                <element signature="e#291#298#1" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#628#635#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateAccountpage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreateAccountpage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="994">
-              <caret line="108" column="3" lean-forward="false" selection-start-line="108" selection-start-column="3" selection-end-line="115" selection-end-column="8" />
+            <state relative-caret-position="378">
+              <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
-                <element signature="e#295#302#1" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#426#433#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -84,8 +91,8 @@
       <file leaf-file-name="interfaceDesign.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="210">
+              <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -130,11 +137,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/resources/interface/jquery-1.11.3.min.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css" />
         <option value="$PROJECT_DIR$/src/main/resources/interface/logInPage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/interface/searchPage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css" />
       </list>
     </option>
   </component>
@@ -313,6 +321,11 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kumun_000\IdeaProjects\ConcertFinder1\src\main\resources\interface" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -754,7 +767,7 @@
       <option name="presentableId" value="Default" />
       <updated>1492541579736</updated>
       <workItem from="1492541581295" duration="543000" />
-      <workItem from="1492542310411" duration="13564000" />
+      <workItem from="1492542310411" duration="24124000" />
     </task>
     <task id="LOCAL-00001" summary="interface stuff">
       <created>1492542360983</created>
@@ -784,11 +797,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492768637178</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="interface stuff">
+      <created>1492769081539</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1492769081539</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14107000" />
+    <option name="totallyTimeSpent" value="24667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -836,7 +856,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="interface stuff" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -932,10 +954,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/concertimage.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/ericjgagnon-wickedpicker-0.4.1-19-g60618f1/ericjgagnon-wickedpicker-60618f1/src/wickedpicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="580" column="10" lean-forward="true" selection-start-line="580" selection-start-column="10" selection-end-line="580" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/jquery-1.11.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#628#635#1" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/logInPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#415#422#1" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/interface/searchPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="343">
+          <caret line="17" column="61" lean-forward="false" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
           <folding>
             <element signature="e#293#300#1" expanded="true" />
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -944,42 +1019,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/logInPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding>
-            <element signature="e#287#294#1" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/interfaceDesign.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/interface/CreateAccountpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
-          <caret line="108" column="3" lean-forward="false" selection-start-line="108" selection-start-column="3" selection-end-line="115" selection-end-column="8" />
+        <state relative-caret-position="378">
+          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding>
-            <element signature="e#295#302#1" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/interface/NewEventPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2058">
-          <caret line="98" column="38" lean-forward="false" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
-          <folding>
-            <element signature="e#291#298#1" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#center#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#426#433#1" expanded="true" />
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
