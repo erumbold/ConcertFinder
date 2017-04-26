@@ -24,7 +24,7 @@
         </script>
         <form action="" method="POST" role="form">
             <center>
-              <input type="text" class="form-control" id="SEARCH" name="SEARCH" placeholder="Enter Event Name">
+              <input type="text" id="SEARCH" name="SEARCH" placeholder="Search..." class="search">
               <button type="submit" class="btn btn-default">Submit</button>
             </center>
         <script>
@@ -36,9 +36,6 @@
                 url: $(this).attr('action'),
                 type: $(this).attr('method'),
                 data: txt,
-                success: function(html) {
-                alert('ok');
-                }
             });
             e.preventDefault();
         });
@@ -54,7 +51,7 @@
         </center>
             <br>
             <br>
-            <a href="viewDB">List View</a>  <a href="map">Map View</a>
+            <a href="search">List View</a>  <a href="map">Map View</a>
         </center>
         <center>
             <br>

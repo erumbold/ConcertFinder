@@ -29,19 +29,21 @@ public class Model {
 
     //0 -- List all Events
     //1 -- List search results
-    public List sendEvents(int flag)
+    public List sendEvents()
     {
         List<String[]> ret;
-        if(flag == 0)
-        {
-            ret = new ArrayList<>(em.listResults());
-            return ret;
-        }else if(flag == 1)
-        {
-            ret = new ArrayList<>(em.listResults());
-            return ret;
-        }
-        return null;
+        ret = new ArrayList<>(em.listResults());
+        return ret;
+
     }
+
+    public List sendEvents(String[] ev)
+    {
+        List<String[]> ret = new ArrayList<>();
+        ret.add(ev);
+        return ret;
+    }
+
+
 
 }

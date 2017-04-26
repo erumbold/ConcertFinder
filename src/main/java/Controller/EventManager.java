@@ -10,6 +10,7 @@ import java.util.List;
  */
 public class EventManager {
     private Database db;
+    private String[] currentQuery = new String[14];
 
     /**
      * This a constructor for EventManager that create a database obj
@@ -41,19 +42,33 @@ public class EventManager {
         db.insertEvent(title, month, day, year, hour, minute, description, venue, address, city, state, zipCode, latitude, longitude);
     }
 
-    /**
-     *This return event
-     * @return give back a list of events (all events)
-     */
+    public String[] selectEventByTitle(String title)
+    {
+        return db.selectEventByTitle(title);
+    }
+
+    public void createQuery(String[] result)
+    {
+        for(int i = 0; i < currentQuery.length; i++)
+        {
+            currentQuery[i] = result[i+1];
+        }
+    }
+
+    public void clearQuery()
+    {
+        for(int i = 0; i < currentQuery.length; i++)
+        {
+            currentQuery[i] = null;
+        }
+    }
+    public String[] getQuery()
+    {
+        return currentQuery;
+    }
     public List listResults(){
         List<String[]> ret = db.listResults();
         return ret;
-    }
-
-    public String[] selectEventByTitle(String title)
-    {
-        String[] tmp = db.selectEventByTitle(title);
-        return tmp;
     }
 
     /**
