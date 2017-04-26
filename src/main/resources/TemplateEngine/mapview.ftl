@@ -21,4 +21,17 @@
 
 <script src="js/map.js"></script>
 
+<script>
+//    $( document ).ready(function() {
+//        $.getJSON("getmapjson", function(result){
+//            console.log(result);
+////            $.each(result, function(key, val){
+////                console.log(key);
+////                console.log(val);
+////                //addMarker(val)
+////            });
+//        });
+//    });
+</script>
+
 <#--AIzaSyC9Y37ttLBmvgaxOo5--xnnEcNECP0bUxk-->

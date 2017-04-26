@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="interfaceDesign.css">
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="searchPage.html">SEARCH</a>
+    <a href="#">NEW EVENT </a>
+</div>
+<span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; LOGIN</span>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+<center>
+    <p>
+        <input type="email" name="email" placeholder="Email">
+    </p>
+    <p>
+        <input type="password" name="event" placeholder="Password">
+    </p>
+</center>
+<center>
+    <br>
+    <br>
+    <input type="submit" value="Login">
+    <p><a href="CreateAccountpage.html">Create Account</a></p>
+</center>
+
+</body>
+</html>

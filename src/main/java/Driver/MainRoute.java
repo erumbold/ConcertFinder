@@ -7,12 +7,12 @@ import spark.ModelAndView;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ArrayList;
+import com.google.gson.*;
+import java.util.*;
 
 /**
  * Created by yanmingwang on 3/29/17.
+ * This class is a routig for URL that will pass data and render the right HTML temple
  */
 public class MainRoute {
     public static void main(String[] args) {
@@ -23,10 +23,11 @@ public class MainRoute {
 
     /**
      *  Function for Routes
+     *  Each route is a url
+     *
      */
     private void init() {
         Model mod = new Model();
-
         get("/", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("title", "Welcome to ConcertFinder");
@@ -112,14 +113,20 @@ public class MainRoute {
             response.status(200);
             return toJSON(mod.sendEvents(0));
         });
-        get("/getJson", (request, response) -> {
+
+        get("/getmapjson", (request, response) -> {
             response.status(200);
-            return mod.sendEvents(0);
+            Gson gson = new Gson();
+            List<String[]> ret= mod.em.listResults();
+            List<String> jsonR =  new ArrayList<>();
+            for (String[] aRet : ret) {
+                jsonR.add(gson.toJson(aRet));
+            }
+            return jsonR;
         });
 
         get("/map", (request, response) -> {
-            Map<String, Object> viewObjects = new HashMap<String, Object>();
-//            viewObjects.put("title", "Map");
+            Map<String, Object> viewObjects = new HashMap<String, Object>();;
             viewObjects.put("templateName", "mapview.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
@@ -129,6 +136,7 @@ public class MainRoute {
     /**
      *  This function converts an Object to JSON String
      * @param obj
+     * Any object
      */
     private static String toJSON(Object obj) {
         try {
