@@ -27,6 +27,9 @@ public class MainRoute {
      *
      */
     private void init() {
+        String[] tempExchange;
+        tempExchange = new String[3];
+        final Boolean[] preLoad = {false};
         Model mod = new Model();
         get("/", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
@@ -61,13 +64,38 @@ public class MainRoute {
             return 1;
         });
 
+//        get("/addEventPre", (request, response) -> {
+//            Map<String, Object> viewObjects = new HashMap<String, Object>();
+//
+//            viewObjects.put("templateName", "addEvent.ftl");
+//            return new ModelAndView(viewObjects, "main.ftl");
+//        }, new FreeMarkerEngine());
+
+        post("/addEventPre/:lat/:lon/:address", (request, response) -> {
+            tempExchange[0] = request.params("lat");
+            tempExchange[1] = request.params("lon");
+            tempExchange[2] = request.params("address");
+            preLoad[0] = true;
+            response.status(200);
+            System.out.println(tempExchange[1]);
+            return response;
+        });
+
         get("/addEvent", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("templateName", "addEvent.ftl");
+            if(preLoad[0]){
+                System.out.println("loaded");
+                viewObjects.put("lat",  tempExchange[0]);
+                viewObjects.put("lon", tempExchange[1]);
+                viewObjects.put("address", tempExchange[2]);
+                preLoad[0] = false;
+            }
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
 
         post("/addEvent", (request, response) -> {
+            System.out.println("AddEvent Post Called");
             ObjectMapper mapper = new ObjectMapper();
             String first = request.body();
             String [] second = first.split(",");

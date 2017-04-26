@@ -35,30 +35,60 @@
       <label for="VENUE_NAME">Venue Name</label>
       <input type="text" class="form-control" id="VENUE_NAME" name="VENUE_NAME" placeholder="Enter Venue Name">
     </div>
-    <div class="form-group">
-      <label for="ADDRESS">Address</label>
-      <input type="text" class="form-control" id="ADDRESS" name="ADDRESS" placeholder="Enter Event Address">
-    </div>
-    <div class="form-group">
-      <label for="CITY">City</label>
-      <input type="text" class="form-control" id="CITY" name="CITY" placeholder="Enter Event City">
-    </div>
-    <div class="form-group">
-      <label for="STATE">State</label>
-      <input type="text" class="form-control" id="STATE" name="STATE" placeholder="Enter Event STATE">
-    </div>
-    <div class="form-group">
-      <label for="ZIPCODE">Zip Code</label>
-      <input type="number" class="form-control" id="ZIPCODE" name="ZIPCODE">
-    </div>
-    <div class="form-group">
-      <label for="LONGITUDE">Longitude</label>
-      <input type="number" class="form-control" id="LONGITUDE" name="LONGITUDE">
-    </div>
-    <div class="form-group">
-      <label for="LATITUDE">Latitude</label>
-      <input type="number" class="form-control" id="LATITUDE" name="LATITUDE">
-    </div>
+
+    <#if address??>
+        <div class="form-group">
+            <label for="ADDRESS">Address</label>
+            <input type="text" class="form-control" id="ADDRESS" name="ADDRESS" placeholder="Enter Event Address" value="${address?split(",")[0]}">
+        </div>
+        <div class="form-group">
+            <label for="CITY">City</label>
+            <input type="text" class="form-control" id="CITY" name="CITY" placeholder="Enter Event City" value="${address?split(",")[1]}">
+        </div>
+        <div class="form-group">
+            <label for="STATE">State</label>
+            <#assign t = address?split(",")[2]>
+            <input type="text" class="form-control" id="STATE" name="STATE" placeholder="Enter Event STATE" value="${t?substring(0,3)}">
+        </div>
+        <div class="form-group">
+            <label for="ZIPCODE">Zip Code</label>
+            <#assign te = t?substring(4)>
+            <input type="number" class="form-control" id="ZIPCODE" name="ZIPCODE" value=${te}>
+        </div>
+        <div class="form-group">
+            <label for="LONGITUDE">Longitude</label>
+            <input type="number" class="form-control" id="LONGITUDE" name="LONGITUDE" value="${lon}">
+        </div>
+        <div class="form-group">
+            <label for="LATITUDE">Latitude</label>
+            <input type="number" class="form-control" id="LATITUDE" name="LATITUDE" value="${lat}">
+        </div>
+    <#else>
+        <div class="form-group">
+          <label for="ADDRESS">Address</label>
+          <input type="text" class="form-control" id="ADDRESS" name="ADDRESS" placeholder="Enter Event Address">
+        </div>
+        <div class="form-group">
+          <label for="CITY">City</label>
+          <input type="text" class="form-control" id="CITY" name="CITY" placeholder="Enter Event City">
+        </div>
+        <div class="form-group">
+          <label for="STATE">State</label>
+          <input type="text" class="form-control" id="STATE" name="STATE" placeholder="Enter Event STATE">
+        </div>
+        <div class="form-group">
+          <label for="ZIPCODE">Zip Code</label>
+          <input type="number" class="form-control" id="ZIPCODE" name="ZIPCODE">
+        </div>
+        <div class="form-group">
+            <label for="LONGITUDE">Longitude</label>
+            <input type="number" class="form-control" id="LONGITUDE" name="LONGITUDE">
+        </div>
+        <div class="form-group">
+            <label for="LATITUDE">Latitude</label>
+            <input type="number" class="form-control" id="LATITUDE" name="LATITUDE">
+        </div>
+    </#if>
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
 

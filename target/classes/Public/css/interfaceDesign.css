@@ -1,6 +1,7 @@
 body{
-    background: linear-gradient(to left, #6B517A 15%, #462758);
+    background: linear-gradient(to left, #6B517A 35%, #462758, #390757 );
     color: #C5C5C5;
+    font-family: Impact, Charcoal, sans-serif;
 }
 
 .search{
@@ -29,7 +30,7 @@ body{
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color:#390757; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -67,7 +68,7 @@ body{
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
+    .sidenav {padding-top: 5px;}
     .sidenav a {font-size: 18px;}
 }
 a{
