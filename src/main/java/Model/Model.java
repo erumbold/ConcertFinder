@@ -11,7 +11,6 @@ import java.util.Map;
 public class Model {
     private Map<String, Object> user;
     public EventManager em;
-    public Database db;
 
     /**
      * Constructor
@@ -44,6 +43,7 @@ public class Model {
         ret.add(ev);
         return ret;
     }
+
 
 
 }

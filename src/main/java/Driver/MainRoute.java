@@ -7,12 +7,12 @@ import spark.ModelAndView;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ArrayList;
+import com.google.gson.*;
+import java.util.*;
 
 /**
  * Created by yanmingwang on 3/29/17.
+ * This class is a routig for URL that will pass data and render the right HTML temple
  */
 public class MainRoute {
     public static void main(String[] args) {
@@ -23,10 +23,14 @@ public class MainRoute {
 
     /**
      *  Function for Routes
+     *  Each route is a url
+     *
      */
     private void init() {
+        String[] tempExchange;
+        tempExchange = new String[3];
+        final Boolean[] preLoad = {false};
         Model mod = new Model();
-
         get("/", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("title", "Welcome to ConcertFinder");
@@ -60,13 +64,38 @@ public class MainRoute {
             return 1;
         });
 
+//        get("/addEventPre", (request, response) -> {
+//            Map<String, Object> viewObjects = new HashMap<String, Object>();
+//
+//            viewObjects.put("templateName", "addEvent.ftl");
+//            return new ModelAndView(viewObjects, "main.ftl");
+//        }, new FreeMarkerEngine());
+
+        post("/addEventPre/:lat/:lon/:address", (request, response) -> {
+            tempExchange[0] = request.params("lat");
+            tempExchange[1] = request.params("lon");
+            tempExchange[2] = request.params("address");
+            preLoad[0] = true;
+            response.status(200);
+            System.out.println(tempExchange[1]);
+            return response;
+        });
+
         get("/addEvent", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("templateName", "addEvent.ftl");
+            if(preLoad[0]){
+                System.out.println("loaded");
+                viewObjects.put("lat",  tempExchange[0]);
+                viewObjects.put("lon", tempExchange[1]);
+                viewObjects.put("address", tempExchange[2]);
+                preLoad[0] = false;
+            }
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
 
         post("/addEvent", (request, response) -> {
+            System.out.println("AddEvent Post Called");
             ObjectMapper mapper = new ObjectMapper();
             String first = request.body();
             String [] second = first.split(",");
@@ -146,14 +175,20 @@ public class MainRoute {
             response.status(200);
             return toJSON(mod.sendEvents());
         });
-        get("/getJson", (request, response) -> {
+
+        get("/getmapjson", (request, response) -> {
             response.status(200);
-            return mod.sendEvents();
+            Gson gson = new Gson();
+            List<String[]> ret= mod.em.listResults();
+            List<String> jsonR =  new ArrayList<>();
+            for (String[] aRet : ret) {
+                jsonR.add(gson.toJson(aRet));
+            }
+            return jsonR;
         });
 
         get("/map", (request, response) -> {
-            Map<String, Object> viewObjects = new HashMap<String, Object>();
-//            viewObjects.put("title", "Map");
+            Map<String, Object> viewObjects = new HashMap<String, Object>();;
             viewObjects.put("templateName", "mapview.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
@@ -189,6 +224,7 @@ public class MainRoute {
     /**
      *  This function converts an Object to JSON String
      * @param obj
+     * Any object
      */
     private static String toJSON(Object obj) {
         try {
