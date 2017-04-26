@@ -34,6 +34,32 @@ public class MainRoute {
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
 
+        post("/", (request, response) -> {
+            ObjectMapper mapper = new ObjectMapper();
+            String first = request.body();
+            String second = first.substring(7, first.length());
+            String [] tmp = second.split("\\+");
+            String result = "";
+            if(tmp.length > 1)
+            {
+                for(int i = 0; i < tmp.length-1; i++)
+                {
+                    result += tmp[i] + " ";
+                }
+                result += tmp[tmp.length-1];
+            }else
+            {
+                result += tmp[0];
+            }
+            System.out.println(result);
+            String[] eventList = mod.em.selectEventByTitle(result);
+            mod.em.clearQuery();
+            mod.em.createQuery(eventList);
+            response.status(204);
+            response.type("application/json");
+            return 1;
+        });
+
         get("/addEvent", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("templateName", "addEvent.ftl");
@@ -66,6 +92,49 @@ public class MainRoute {
             return 1;
         });
 
+        get("/search", (request, response) -> {
+            response.status(200);
+            Map<String, Object> viewObjects = new HashMap<String, Object>();
+            viewObjects.put("templateName", "showSearch.ftl");
+            return new ModelAndView(viewObjects, "main.ftl");
+        }, new FreeMarkerEngine());
+
+        post("/search", (request, response) -> {
+            ObjectMapper mapper = new ObjectMapper();
+            String first = request.body();
+            String second = first.substring(7, first.length());
+            String [] tmp = second.split("\\+");
+            String result = "";
+            if(tmp.length > 1)
+            {
+                for(int i = 0; i < tmp.length-1; i++)
+                {
+                    result += tmp[i] + " ";
+                }
+                result += tmp[tmp.length-1];
+            }else
+            {
+                result += tmp[0];
+            }
+            System.out.println(result);
+            String[] eventList = mod.em.selectEventByTitle(result);
+            mod.em.clearQuery();
+            mod.em.createQuery(eventList);
+            response.status(204);
+            response.type("application/json");
+            return 1;
+        });
+
+        get("/getsearch", (request, response) -> {
+            response.status(200);
+            String[] tmp = mod.em.getQuery();
+            if(tmp[0] != null)
+            {
+                return toJSON(mod.sendEvents(mod.em.getQuery()));
+            }
+            return toJSON(mod.sendEvents());
+        });
+
         get("/viewDB", (request, response) -> {
             response.status(200);
             Map<String, Object> viewObjects = new HashMap<String, Object>();
@@ -88,6 +157,32 @@ public class MainRoute {
             viewObjects.put("templateName", "mapview.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
+
+        post("/map", (request, response) -> {
+            ObjectMapper mapper = new ObjectMapper();
+            String first = request.body();
+            String second = first.substring(7, first.length());
+            String [] tmp = second.split("\\+");
+            String result = "";
+            if(tmp.length > 1)
+            {
+                for(int i = 0; i < tmp.length-1; i++)
+                {
+                    result += tmp[i] + " ";
+                }
+                result += tmp[tmp.length-1];
+            }else
+            {
+                result += tmp[0];
+            }
+            System.out.println(result);
+            String[] eventList = mod.em.selectEventByTitle(result);
+            mod.em.clearQuery();
+            mod.em.createQuery(eventList);
+            response.status(204);
+            response.type("application/json");
+            return 1;
+        });
 
     }
 

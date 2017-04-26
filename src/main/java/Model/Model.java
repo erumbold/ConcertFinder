@@ -28,9 +28,22 @@ public class Model {
                 "Ithaca College", "953 Danby Road", "Ithaca", "NY", "14850", 42.4217372, -76.4969761);
     }
 
+    //0 -- List all Events
+    //1 -- List search results
     public List sendEvents()
     {
-        List<String[]> ret = new ArrayList<>(em.listResults());
+        List<String[]> ret;
+        ret = new ArrayList<>(em.listResults());
+        return ret;
+
+    }
+
+    public List sendEvents(String[] ev)
+    {
+        List<String[]> ret = new ArrayList<>();
+        ret.add(ev);
         return ret;
     }
+
+
 }
