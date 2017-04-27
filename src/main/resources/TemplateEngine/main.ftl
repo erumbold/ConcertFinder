@@ -5,6 +5,9 @@
         <title>Home</title>
     </head>
     <body>
+    <center>
+    <img src="../interface/concertimage.png" style="width:75px;height:100px;">
+    </center>
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

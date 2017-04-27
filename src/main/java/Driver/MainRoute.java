@@ -111,11 +111,11 @@ public class MainRoute {
                 }
                 result = result.substring(1, (result.length()-1));
                 values[i] = result;
-                System.out.println(values[i]);
+                System.out.println(i + ":  " + values[i]);
             }
-            mod.em.insertEvent(values[0],Integer.parseInt(values[1]), Integer.parseInt(values[2]), Integer.parseInt(values[3]),
-                    Integer.parseInt(values[4]), Integer.parseInt(values[5]), values[6], values[7], values[8], values[9],
-                    values[10], values[11], Double.parseDouble(values[12]), Double.parseDouble(values[13]));
+            mod.em.insertEvent(values[1],Integer.parseInt(values[4]), Integer.parseInt(values[5]), Integer.parseInt(values[7]),
+                    Integer.parseInt(values[6]), 0, values[8], values[2], values[3], "Temp",
+                    "Temp", "Temp", 0, 0);
             response.status(200);
             response.type("application/json");
             return 1;
