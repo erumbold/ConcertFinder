@@ -8,7 +8,6 @@ import spark.servlet.SparkApplication;
 
 import static org.junit.Assert.*;
 
-
 /**
  * Created by yanmingwang on 3/27/17.
  */
