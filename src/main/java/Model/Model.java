@@ -19,12 +19,8 @@ public class Model {
 
         this.user = new HashMap<>();
         this.em = new EventManager();
-        em.insertEvent("Firefly Music Festival", 6, 18, 2017, 12, 0, "description",
-                "The Woodlands", "123 Place", "Dover", "DE", "19901", 39.1900301, -75.5311199);
-        em.insertEvent("DRAM at Ithaca College", 3, 21, 2017, 12, 0, "description",
-                "Ithaca College", "953 Danby Road", "Ithaca", "NY", "14850", 42.4217372, -76.4969761);
-        em.insertEvent("Drake at Ithaca College", 3, 21, 2017, 12, 0, "description",
-                "Ithaca College", "953 Danby Road", "Ithaca", "NY", "14850", 42.4217372, -76.4969761);
+//        em.insertEvent("Test Festival", 6, 18, 2017, 12, 0, "description",
+//                "The Woodlands", "123 Place", "Dover", "DE", "19901", 42.439577, -76.497002);
     }
 
     //0 -- List all Events

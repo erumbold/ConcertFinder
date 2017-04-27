@@ -436,8 +436,10 @@ public class Database {
     public void insertEvent(String title, int month, int day, int year, int hour, int minute,
                             String description, String venueName, String address, String city,
                             String state, String zipCode, double longitude, double latitude){
+        System.out.println("insertEvent Called");
 
         try {
+            System.out.println("insertEvent Tried");
 
             PreparedStatement st = c.prepareStatement("INSERT OR IGNORE INTO EVENT (ID, TITLE, MONTH, DAY, YEAR, HOUR, " +
                     "MINUTE, DESCRIPTION, VENUE_NAME, ADDRESS, CITY, STATE, ZIPCODE, LATITUDE, LONGITUDE) " +
@@ -459,8 +461,10 @@ public class Database {
             st.setDouble(15, longitude);
             st.executeUpdate();
             c.commit();
+            System.out.println("insertEvent Added");
             LOGGER.log(Level.FINE, "Event {0} added to database", title);
         } catch (Exception e){
+            System.out.println("insertEvent NOT ADDED");
             LOGGER.log(Level.INFO, "Event {0} NOT added to database", title);
         }
     }
