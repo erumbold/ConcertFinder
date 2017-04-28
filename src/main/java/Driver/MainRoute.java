@@ -132,7 +132,7 @@ public class MainRoute {
         post("/addEvent", (request, response) -> {
             System.out.println("sendEventData Called");
             String addList=request.queryParams().toString();
-            addList = addList.substring(14, addList.length()-1);
+            addList = addList.substring(2, addList.length()-1);
             addList = "{"+addList;
             System.out.println(addList);
             EventJson temp = gson.fromJson(addList, EventJson.class);
