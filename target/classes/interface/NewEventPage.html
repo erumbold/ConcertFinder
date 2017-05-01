@@ -8,7 +8,7 @@
 <body>
 <center>
     <a href="searchPage.html">
-        <img src="concertimage.png" style="width:75px;height:100px;">
+        <img src="../Public/assets/concertimage.png" style="width:75px;height:100px;">
     </a>
 
 </center>
@@ -32,18 +32,24 @@
     <br>
     <br>
     <br>
-
-
-        <input type="text" placeholder="Title">
+        <form action="" method="POST" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="TITLE" name="TITLE" placeholder="Title">
+            </div>
     </p>
     <p>
-        <input type="Text" placeholder="Venue Name">
+            <div class="form-group">
+                <input type="text" class="form-control" id="VENUE_NAME" name="VENUE_NAME" placeholder="Venue Name">
+            </div>
     </p>
     <p>
-        <input type="Text" placeholder="Address">
+            <div class="form-group">
+                <input type="text" class="form-control" id="ADDRESS" name="ADDRESS" placeholder="Address">
+            </div>
     </p>
     <p>
-         <select name="month">
+            <div class="form-group">
+         <select name="MONTH" id="MONTH">
         <option selected value=''>--Select Month--</option>
         <option value='1'>Janaury</option>
         <option value='2'>February</option>
@@ -57,7 +63,7 @@
         <option value='10'>October</option>
         <option value='11'>November</option>
         <option value='12'>December</option>
-    </select> <select>
+    </select></div>  <div class="form-group"><select name="DAY" id="DAY">
         <option>--Select Day--</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -90,12 +96,10 @@
         <option value="29">29</option>
         <option value="30">30</option>
         <option value="31">31</option>
-    </select>
+    </select></div>
 
-        </select>
-    </p>
     <p>
-        <select>
+            <div class="form-group"><select name="TIME" id="TIME">
             <option>--Select Time--</option>
             <option value="1">12:00AM</option>
             <option value="2">12:30AM</option>
@@ -144,17 +148,19 @@
             <option value="45">10:00PM</option>
             <option value="46">10:30PM</option>
             <option value="47">11:00PM</option>
-            <option value="48">11:30PM</option> </select> <select id="year"></select>
+            <option value="48">11:30PM</option> </select></div> <div class="form-group"><select id="year"></select></div>
     </p>
     <p>
     <p>
         Description(optional):
     </p>
-    <textarea rows="4" cols="50">
-            </textarea>
+            <div class="form-group">
+    <textarea rows="4" cols="50" class="form-control" id="DESCRIPTION" name="DESCRIPTION">
+            </textarea></div>
 
     </p>
     <input type="submit" value="Submit">
+            </form>
 </center>
 <script>
     var start = 1900;

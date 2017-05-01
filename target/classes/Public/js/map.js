@@ -6,7 +6,7 @@ function initMap() { //this function will get call back from Google map API
     mapDiv = document.getElementById('map');
     map = new google.maps.Map(mapDiv, {
         center: {lat: 42.4393687, lng: -76.501165}, // init api
-        zoom: 15, draggable: true, maxZoom: 17, minZoom: 14, streetViewControl: false,
+        zoom: 15, draggable: true, maxZoom: 19, minZoom: 14, streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.roadmap
     }); //set map option
     var geocoder = new google.maps.Geocoder;
