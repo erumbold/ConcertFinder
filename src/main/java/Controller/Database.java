@@ -866,8 +866,20 @@ public class Database {
         }
     }
 
+    public void clearEventTable(){
+        try {
+            PreparedStatement st = c.prepareStatement("DELETE FROM EVENT");
+            st.executeUpdate();
+            c.commit();
+            LOGGER.log(Level.FINE, "Table {0} deleted");
+        } catch (Exception e){
+            LOGGER.log(Level.INFO, "Table {0} NOT deleted");
+        }
+    }
+
     public static void main(String[] args) {
         Database db = new Database();
-        db.deleteEvent("Drake at Ithaca College");
+//        db.deleteEvent("Drake at Ithaca College");
+//        db.clearEventTable();
     }
 }
