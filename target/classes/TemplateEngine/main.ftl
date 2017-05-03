@@ -5,13 +5,18 @@
         <title>Home</title>
     </head>
     <body>
+    <center>
+    <img src="assets/concertimage.png" style="width:75px;height:100px;">
+    </center>
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="logInPage.html">LOGIN</a>
-            <a href="addEvent">NEW EVENT </a>
+            <#--<a href="logInPage.html">LOGIN</a>-->
+            <a href="/">Home</a>
+            <a href="addEvent">New Event</a>
+
         </div>
-        <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; EVENT</span>
+        <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         <script>
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
@@ -46,12 +51,12 @@
         <script src="js/bootstrap.min.js"></script>
         <center>
             <div class="container">
+                <a href="search">List View</a>  <a href="map">Map View</a>
                 <#include "${templateName}">
             </div>
         </center>
             <br>
             <br>
-            <a href="search">List View</a>  <a href="map">Map View</a>
         </center>
         <center>
             <br>
