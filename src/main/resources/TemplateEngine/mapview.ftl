@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="css/map.css">
+<link rel="stylesheet" type="text/css" href="css/interfaceDesign.css"
 <div class="starter-template">
     <div id="map"></div>
     <div id="holder"></div>
