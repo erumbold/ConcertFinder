@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="0">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="ConcertFinder" uuid="b4faab33-e144-46c2-bb7c-d448c7105da1">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>

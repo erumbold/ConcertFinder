@@ -841,8 +841,8 @@ public class Database {
                 toAdd[9] = rs.getString("CITY");
                 toAdd[10] = rs.getString("STATE");
                 toAdd[11] = rs.getString("ZIPCODE");
-                toAdd[12] = rs.getDouble("LATITUDE") + "";
-                toAdd[13] = rs.getDouble("LONGITUDE") + "";
+                toAdd[12] = rs.getFloat("LATITUDE")+"";
+                toAdd[13] = rs.getFloat("LONGITUDE")+"";
                 results.add(toAdd);
             }
             rs.close();

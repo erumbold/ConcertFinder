@@ -36,7 +36,11 @@ public class Model {
     public List sendEvents(String[] ev)
     {
         List<String[]> ret = new ArrayList<>();
-        ret.add(ev);
+        String[] oc = new String[11];
+        for (int i = 0; i < oc.length; i++){
+            oc[i] = ev[i];
+        }
+        ret.add(oc);
         return ret;
     }
 

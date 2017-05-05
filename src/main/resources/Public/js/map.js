@@ -108,4 +108,3 @@ function clean(id){ //clean the form
     var temp = $("#"+id.id).val();
     temp.val("");
 }
-

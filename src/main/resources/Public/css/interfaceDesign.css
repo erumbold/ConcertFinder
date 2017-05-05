@@ -1,7 +1,7 @@
 body{
     background: linear-gradient(to left, #6B517A 35%, #462758, #390757 );
     color: #C5C5C5;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .search{
@@ -73,5 +73,9 @@ body{
 }
 a{
     color: #C5C5C5;
+}
+
+#map{
+    color: black;
 }
 
