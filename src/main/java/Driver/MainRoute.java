@@ -23,8 +23,7 @@ public class MainRoute {
 
     /**
      *  Function for Routes
-     *  Each route is a url
-     *
+     *  Each route is a url that can be reached
      */
     private void init() {
         String[] tempExchange;
@@ -32,13 +31,18 @@ public class MainRoute {
         final Boolean[] preLoad = {false};
         Gson gson = new Gson();
         Model mod = new Model();
+        /**
+         * return main page template
+         */
         get("/", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("title", "Welcome to ConcertFinder");
             viewObjects.put("templateName", "home.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
-
+        /**
+         * get search query
+         */
         post("/", (request, response) -> {
             ObjectMapper mapper = new ObjectMapper();
             String first = request.body();
@@ -64,7 +68,9 @@ public class MainRoute {
             response.type("application/json");
             return 1;
         });
-
+        /**
+         * get coordinate from google map api and store it
+         */
         post("/addEventPre/:lat/:lon/:address", (request, response) -> {
             tempExchange[0] = request.params("lat");
             tempExchange[1] = request.params("lon");
@@ -73,7 +79,9 @@ public class MainRoute {
             response.status(200);
             return response;
         });
-
+        /**
+         * return an addevent page with coordinate pre-fill
+         */
         get("/addEvent", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("templateName", "addEvent.ftl");
@@ -85,14 +93,18 @@ public class MainRoute {
             }
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
-
+        /**
+         * return search page
+         */
         get("/search", (request, response) -> {
             response.status(200);
             Map<String, Object> viewObjects = new HashMap<String, Object>();
             viewObjects.put("templateName", "showSearch.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
-
+        /**
+         * get search query
+         */
         post("/search", (request, response) -> {
             ObjectMapper mapper = new ObjectMapper();
             String first = request.body();
@@ -118,7 +130,9 @@ public class MainRoute {
             response.type("application/json");
             return 1;
         });
-
+        /**
+         * get search result
+         */
         get("/getsearch", (request, response) -> {
             response.status(200);
             String[] tmp = mod.em.getQuery();
@@ -128,34 +142,28 @@ public class MainRoute {
             }
             return toJSON(mod.sendEvents());
         });
-
+        /**
+         * get event info as json and create an event obj
+         */
         post("/addEvent", (request, response) -> {
-            System.out.println("sendEventData Called");
             String addList=request.queryParams().toString();
             addList = addList.substring(2, addList.length()-1);
             addList = "{"+addList;
-            System.out.println(addList);
             EventJson temp = gson.fromJson(addList, EventJson.class);
-            System.out.println(temp);
             mod.em.insertEvent(temp.getTITLE(),temp.getMONTH(),temp.getDAY(),temp.getYEAR(),temp.getHOUR(),temp.getMINUTE(),temp.getDESCRIPTION(),temp.getVENUE_NAME(),temp.getADDRESS(),temp.getCITY(),temp.getSTATE(),temp.getZIPCODE(),temp.getLATITUDE(),temp.getLONGITUDE());
-            System.out.println("Done!");
             response.status(200);
             return response;
         });
-
-
-        get("/viewDB", (request, response) -> {
-            response.status(200);
-            Map<String, Object> viewObjects = new HashMap<String, Object>();
-            viewObjects.put("templateName", "showEvent.ftl");
-            return new ModelAndView(viewObjects, "main.ftl");
-        }, new FreeMarkerEngine());
-
+        /**
+         * return event json
+         */
         get("/getevents", (request, response) -> {
             response.status(200);
             return toJSON(mod.sendEvents());
         });
-
+        /**
+         * return list of event as json for map
+         */
         get("/getmapjson", (request, response) -> {
             response.status(200);
             Gson ngson = new Gson();
@@ -166,13 +174,17 @@ public class MainRoute {
             }
             return jsonR;
         });
-
+        /**
+         * return map page
+         */
         get("/map", (request, response) -> {
             Map<String, Object> viewObjects = new HashMap<String, Object>();;
             viewObjects.put("templateName", "mapview.ftl");
             return new ModelAndView(viewObjects, "main.ftl");
         }, new FreeMarkerEngine());
-
+        /**
+         * get search query
+         */
         post("/map", (request, response) -> {
             ObjectMapper mapper = new ObjectMapper();
             String first = request.body();
@@ -220,173 +232,4 @@ public class MainRoute {
         return null;
     }
 
-}
-
-class EventJson{
-    public String TITLE;
-    public int MONTH;
-    public int DAY;
-    public int YEAR;
-    public int HOUR;
-    public int MINUTE;
-    public String DESCRIPTION;
-    public String VENUE_NAME;
-    public String ADDRESS;
-    public String CITY;
-    public String STATE;
-    public String ZIPCODE;
-    public double LONGITUDE;
-    public double LATITUDE;
-
-    public EventJson(){
-    }
-
-    public EventJson(double LATITUDE, String TITLE, int MONTH, int DAY, int YEAR, int HOUR, int MINUTE, String DESCRIPTION, String VENUE_NAME, String ADDRESS, String CITY, String STATE, String ZIPCODE, double LONGITUDE) {
-        this.LATITUDE = LATITUDE;
-        this.TITLE = TITLE;
-        this.MONTH = MONTH;
-        this.DAY = DAY;
-        this.YEAR = YEAR;
-        this.HOUR = HOUR;
-        this.MINUTE = MINUTE;
-        this.DESCRIPTION = DESCRIPTION;
-        this.VENUE_NAME = VENUE_NAME;
-        this.ADDRESS = ADDRESS;
-        this.CITY = CITY;
-        this.STATE = STATE;
-        this.ZIPCODE = ZIPCODE;
-        this.LONGITUDE = LONGITUDE;
-    }
-
-    public String getTITLE() {
-        return TITLE;
-    }
-
-    public void setTITLE(String TITLE) {
-        this.TITLE = TITLE;
-    }
-
-    public int getMONTH() {
-        return MONTH;
-    }
-
-    public void setMONTH(int MONTH) {
-        this.MONTH = MONTH;
-    }
-
-    public int getDAY() {
-        return DAY;
-    }
-
-    public void setDAY(int DAY) {
-        this.DAY = DAY;
-    }
-
-    public int getYEAR() {
-        return YEAR;
-    }
-
-    public void setYEAR(int YEAR) {
-        this.YEAR = YEAR;
-    }
-
-    public int getHOUR() {
-        return HOUR;
-    }
-
-    public void setHOUR(int HOUR) {
-        this.HOUR = HOUR;
-    }
-
-    public int getMINUTE() {
-        return MINUTE;
-    }
-
-    public void setMINUTE(int MINUTE) {
-        this.MINUTE = MINUTE;
-    }
-
-    public String getDESCRIPTION() {
-        return DESCRIPTION;
-    }
-
-    public void setDESCRIPTION(String DESCRIPTION) {
-        this.DESCRIPTION = DESCRIPTION;
-    }
-
-    public String getVENUE_NAME() {
-        return VENUE_NAME;
-    }
-
-    public void setVENUE_NAME(String VENUE_NAME) {
-        this.VENUE_NAME = VENUE_NAME;
-    }
-
-    public String getADDRESS() {
-        return ADDRESS;
-    }
-
-    public void setADDRESS(String ADDRESS) {
-        this.ADDRESS = ADDRESS;
-    }
-
-    public String getCITY() {
-        return CITY;
-    }
-
-    public void setCITY(String CITY) {
-        this.CITY = CITY;
-    }
-
-    public String getSTATE() {
-        return STATE;
-    }
-
-    public void setSTATE(String STATE) {
-        this.STATE = STATE;
-    }
-
-    public String getZIPCODE() {
-        return ZIPCODE;
-    }
-
-    public void setZIPCODE(String ZIPCODE) {
-        this.ZIPCODE = ZIPCODE;
-    }
-
-    public double getLONGITUDE() {
-        return LONGITUDE;
-    }
-
-    public void setLONGITUDE(double LONGITUDE) {
-        this.LONGITUDE = LONGITUDE;
-    }
-
-    public double getLATITUDE() {
-        return LATITUDE;
-    }
-
-    public void setLATITUDE(double LATITUDE) {
-        this.LATITUDE = LATITUDE;
-    }
-
-    @Override
-    public String toString() {
-        return "EventJson{" +
-                "TITLE='" + TITLE + '\'' +
-                ", MONTH=" + MONTH +
-                ", DAY=" + DAY +
-                ", YEAR=" + YEAR +
-                ", HOUR=" + HOUR +
-                ", MINUTE=" + MINUTE +
-                ", DESCRIPTION='" + DESCRIPTION + '\'' +
-                ", VENUE_NAME='" + VENUE_NAME + '\'' +
-                ", ADDRESS='" + ADDRESS + '\'' +
-                ", CITY='" + CITY + '\'' +
-                ", STATE='" + STATE + '\'' +
-                ", ZIPCODE='" + ZIPCODE + '\'' +
-                ", LONGITUDE=" + LONGITUDE +
-                ", LATITUDE=" + LATITUDE +
-                '}';
-    }
 }

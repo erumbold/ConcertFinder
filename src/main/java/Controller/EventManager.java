@@ -39,7 +39,7 @@ public class EventManager {
      */
     public void insertEvent(String title, int month, int day, int year, int hour, int minute, String description,
                             String venue, String address, String city, String state, String zipCode, double latitude, double longitude){
-        System.out.println("Event insertEvent Called");
+
         db.insertEvent(title, month, day, year, hour, minute, description, venue, address, city, state, zipCode, latitude, longitude);
     }
 

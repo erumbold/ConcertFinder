@@ -1,8 +1,6 @@
 package Model;
 
-import Controller.Database;
 import Controller.EventManager;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +19,7 @@ public class Model {
         this.em = new EventManager();
 //        em.insertEvent("Test Festival", 6, 18, 2017, 12, 0, "description",
 //                "The Woodlands", "123 Place", "Dover", "DE", "19901", 42.439577, -76.497002);
-    }
+}
 
     //0 -- List all Events
     //1 -- List search results
@@ -43,7 +41,5 @@ public class Model {
         ret.add(oc);
         return ret;
     }
-
-
 
 }
