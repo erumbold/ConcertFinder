@@ -1,0 +1,14 @@
+Quick Start Guide
+
+Currently, ConcertFinder only tested under local host environment.
+
+To run ConcertFinder you will need:
+- IntelliJ 14 or 14+
+- Apache Maven
+- JDK 1.8.0+
+- Git
+
+1. Down the master as zip or fork to your local directory
+2. Open the directory with your IntelliJ
+3. Run MainRoute.java under /src/main/java/Driver/ in IntelliJ
+4. go to localhost:4567 in a web browser
